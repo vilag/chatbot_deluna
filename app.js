@@ -30,7 +30,7 @@ const MYSQL_DB_NAME = 'u690371019_gp'
 
 const flowSecundario = addKeyword(['a','b','c','d','e','f','g','h','i','j','k']).addAnswer(['📄 Aquí tenemos el flujo secundario'])
 
-const flowSecundarioKinder = addKeyword(['Citlaltzintli','Adolfo Christlieb Ibarola','Gorgonio Cortes Carrasco','Jose Luis Figueroa','Francisco Ruiz Sánchez']).addAnswer(['Espere por favor, consultando Kinder...'])
+const flowSecundarioKinder = addKeyword(['kinder','Citlaltzintli','Adolfo Christlieb Ibarola','Gorgonio Cortes Carrasco','Jose Luis Figueroa','Francisco Ruiz Sánchez']).addAnswer(['Espere por favor, consultando Kinder...'])
 const flowSecundarioPrimaria = addKeyword(['24 de octubre', 'Amado Nervo']).addAnswer(['Espere por favor. consultando Primaria...'])
 const flowSecundarioSecundaria = addKeyword(['José Antonio Torres', 'Carlos González Peña','Jesús Reyes Heroles','']).addAnswer(['Espere por favor. consultando Secundaria...'])
 
