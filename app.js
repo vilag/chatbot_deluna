@@ -97,9 +97,9 @@ const flowKinder = addKeyword(['1']).addAnswer(
     [flowSecundarioKinder]
 )
 
-var words = ['hola', 'Buenos dias', 'Que tal'];
 
-const flowPrincipal = addKeyword(words)
+
+const flowPrincipal = addKeyword(['hola', 'Buenos dias', 'Que tal'])
     .addAnswer('Bienvenid@ a *Uniformes De Luna*')
     .addAnswer(
         [
