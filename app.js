@@ -51,15 +51,9 @@ const kinder1_1 = addKeyword(['1']).addAnswer(
     null,
     [kinder1_1_1,kinder1_1_2,kinder1_1_3,kinder1_1_4,kinder1_1_5]
 )
-const kinder1_2 = addKeyword(['2']).addAnswer(
-    ['Seleccione la opcion deseada',
-    '1. Volver a escribir nombre del kinder',
-    '2. Terminar conversación'
-    ],
-    null,
-    null,
-    [Kinder]
-)
+const kinder1_2 = addKeyword(['2']).
+addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
+
 
 
 
