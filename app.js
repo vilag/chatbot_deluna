@@ -28,7 +28,15 @@ const MYSQL_DB_NAME = 'u690371019_gp'
  * Primero declaras los submenus 1.1 y 2.1, luego el 1 y 2 y al final el principal.
  */
 const kinder1_1_1 = addKeyword(['1']).
-addAnswer(['⌛⌛⌛ Consultando lista de precios para el "Kinder Citlaltzintli"...'])
+addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Kinder Citlaltzintli"*...'])
+const kinder1_1_2 = addKeyword(['2']).
+addAnswer(['⌛⌛⌛ Consultando *Fechas y horarios de venta*...'])
+const kinder1_1_3 = addKeyword(['3']).
+addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
+const kinder1_1_4 = addKeyword(['4']).
+addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
+const kinder1_1_5 = addKeyword(['4']).
+addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
 
 
 const kinder1_1 = addKeyword(['1']).addAnswer(
@@ -41,7 +49,7 @@ const kinder1_1 = addKeyword(['1']).addAnswer(
     ],
     null,
     null,
-    [kinder1_1_1]
+    [kinder1_1_1,kinder1_1_2,kinder1_1_3,kinder1_1_4,kinder1_1_5]
 )
 
 
