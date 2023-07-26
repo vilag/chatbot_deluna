@@ -39,7 +39,8 @@ const kinder1_1_5 = addKeyword(['5']).
 addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
 
 
-const kinder1_1 = addKeyword(['1']).addAnswer(
+const kinder1_1 = addKeyword(['1'])
+.addAnswer(
     ['¿Que información desea consultar?',
     '1. Precios',
     '2. Fechas y horarios de venta',
@@ -53,8 +54,6 @@ const kinder1_1 = addKeyword(['1']).addAnswer(
 )
 const kinder1_2 = addKeyword(['2']).
 addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
-
-
 
 
 const Kinder = addKeyword(['1'])
