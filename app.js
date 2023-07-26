@@ -30,7 +30,17 @@ const MYSQL_DB_NAME = 'u690371019_gp'
 
 const flowSecundario = addKeyword(['a','b','c','d','e','f','g','h','i','j','k']).addAnswer(['📄 Aquí tenemos el flujo secundario'])
 
-const flowSecundarioKinder = addKeyword(['kinder','Citlaltzintli','Adolfo Christlieb Ibarola','Gorgonio Cortes Carrasco','Jose Luis Figueroa','Francisco Ruiz Sánchez']).addAnswer(['Espere por favor, consultando Kinder...'])
+const flowSecundarioKinder1 = addKeyword([
+    'Citlaltzintli'
+]).addAnswer(['Espere por favor, consultando Kinder...'])
+const flowSecundarioKinder2 = addKeyword([
+    'Adolfo Christlieb Ibarola',
+    'Adolfo',
+    'Christlieb',
+    'Ibarola',
+    'Adolfo Christlieb',
+    'Christlieb Ibarola'
+]).addAnswer(['Espere por favor, consultando Kinder...'])
 const flowSecundarioPrimaria = addKeyword(['24 de octubre', 'Amado Nervo']).addAnswer(['Espere por favor. consultando Primaria...'])
 const flowSecundarioSecundaria = addKeyword(['José Antonio Torres', 'Carlos González Peña','Jesús Reyes Heroles','']).addAnswer(['Espere por favor. consultando Secundaria...'])
 
@@ -94,7 +104,7 @@ const flowKinder = addKeyword(['1']).addAnswer(
     ['Por favor escribe el nombre o numero de tu Kinder'],
     null,
     null,
-    [flowSecundarioKinder]
+    [flowSecundarioKinder1, flowSecundarioKinder2]
 )
 
 
@@ -103,10 +113,10 @@ const flowPrincipal = addKeyword(['hola', 'Hola', 'buenos dias', 'Buenos dias', 
     .addAnswer('Hola!!! Gracias por comunicarte a *Uniformes De Luna*. Te recordamos que nuestro horario de atención es de lunes a viernes de 9:00am a 5:00pm.')
     .addAnswer(
         [
-            'Por favor escribe el numero de tu escuela:',
-            '👉 *1* - Kinder',
-            '👉 *2* - Primaria',
-            '👉 *3* - Secundaria',
+            'Por favor escribe el numero de la opción deseada:',
+            '1. - Kinder',
+            '2. - Primaria',
+            '3. - Secundaria',
         ],
         null,
         null,
