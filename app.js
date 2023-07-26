@@ -99,8 +99,8 @@ const flowKinder = addKeyword(['1']).addAnswer(
 
 
 
-const flowPrincipal = addKeyword(['hola', 'Buenos dias', 'Que tal'])
-    .addAnswer('Bienvenid@ a *Uniformes De Luna*')
+const flowPrincipal = addKeyword(['hola', 'Hola', 'buenos dias', 'Buenos dias', 'Buenas noches', 'buenas noches', 'Buenas tardes','buenas tardes'])
+    .addAnswer('Hola!!! Gracias por comunicarte a *Uniformes De Luna*. Te recordamos que nuestro horario de atención es de lunes a viernes de 9:00am a 5:00pm.')
     .addAnswer(
         [
             'Por favor escribe el numero de tu escuela:',
