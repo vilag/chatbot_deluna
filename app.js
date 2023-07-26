@@ -58,7 +58,7 @@ addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
 
 const kinder1 = addKeyword(['Citlaltzintli'])
 .addAnswer(
-    ['Ustued quiso decir “Kinder Citlaltzintli” seleccione la opción deseada.','1. Si','2. No'],
+    ['¿Usted quiso decir “Kinder Citlaltzintli”?','1. Si','2. No'],
     null,
     null,
     [kinder1_1,kinder1_2]
