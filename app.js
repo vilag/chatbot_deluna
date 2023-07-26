@@ -28,17 +28,9 @@ const MYSQL_DB_NAME = 'u690371019_gp'
  * Primero declaras los submenus 1.1 y 2.1, luego el 1 y 2 y al final el principal.
  */
 const kinder1_1_1 = addKeyword(['1']).
-addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Kinder Citlaltzintli"*...',
-    '*Si lo prefiere seleccione otra opción:*',
-    '1. Precios',
-    '2. Fechas y horarios de venta',
-    '3. Seguimiento de un pedido',
-    '4. Necesito hacer otra consulta no disponible en el menú',
-    '5. Terminar conversación',
-    '6. Volver al menu principal'
-],null,null,[kinder1_1_1,kinder1_1_2,kinder1_1_3,kinder1_1_4,kinder1_1_5,flowPrincipal])
+addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Kinder Citlaltzintli"*...'])
 const kinder1_1_2 = addKeyword(['2']).
-addAnswer(['⌛⌛⌛ Consultando *Fechas y horarios de venta*...'])
+addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Citlaltzintli"*...'])
 const kinder1_1_3 = addKeyword(['3']).
 addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
 const kinder1_1_4 = addKeyword(['4']).
@@ -59,31 +51,38 @@ const kinder1_1 = addKeyword(['1']).addAnswer(
     null,
     [kinder1_1_1,kinder1_1_2,kinder1_1_3,kinder1_1_4,kinder1_1_5]
 )
-
-const kinder1 = addKeyword([
-    'Citlaltzintli'
-]).addAnswer(
-    ['¿Usted quiso decir “Kinder Citlaltzintli”?','1. SI','2. NO'],
+const kinder1_2 = addKeyword(['2']).addAnswer(
+    ['Seleccione la opcion deseada',
+    '1. Volver a escribir nombre del kinder',
+    '2. Terminar conversación'
+    ],
     null,
     null,
-    [kinder1_1]
+    [Kinder]
 )
 
-const Kinder = addKeyword(['1']).addAnswer(
-    ['Has seleccionado Kínder, por favor ingresa el nombre de la escuela'],
+
+
+const Kinder = addKeyword(['1'])
+.addAnswer('Has seleccionado Kínder, por favor ingresa el nombre de la escuela', null, (ctx, { fallBack }) => {
+    if (!ctx.body.includes('Citlaltzintli')) return fallBack()
+})
+.addAnswer(
+    ['¿Usted quiso decir “Kinder Citlaltzintli”?','1. Si','2. No'],
     null,
     null,
-    [kinder1]
+    [kinder1_1,kinder1_2]
 )
 
-const flowPrincipal = addKeyword(['6','hola', 'Hola', 'buenos dias', 'Buenos dias', 'Buenas noches', 'buenas noches', 'Buenas tardes','buenas tardes'])
+
+const flowPrincipal = addKeyword(['hola', 'Hola', 'buenos dias', 'Buenos dias', 'Buenas noches', 'buenas noches', 'Buenas tardes','buenas tardes'])
     .addAnswer('Hola!!! Gracias por comunicarte a *Uniformes De Luna*. Te recordamos que nuestro horario de atención es de lunes a viernes de 9:00am a 5:00pm.')
     .addAnswer(
         [
             'Por favor escribe el numero de la opción deseada:',
             '1. - Kinder',
             '2. - Primaria',
-            '3. - Secundaria',
+            '3. - Secundaria'
         ],
         null,
         null,
