@@ -27,101 +27,43 @@ const MYSQL_DB_NAME = 'u690371019_gp'
  *
  * Primero declaras los submenus 1.1 y 2.1, luego el 1 y 2 y al final el principal.
  */
-const nombrekinder1 = addKeyword(['Si', 'No']).addAnswer(['Espere por favor. consultando Kinder...'])
+const kinder1_1_1 = addKeyword(['1']).
+addAnswer(['⌛⌛⌛ Consultando lista de precios para el "Kinder Citlaltzintli"...'])
+
+
+const kinder1_1 = addKeyword(['1']).addAnswer(
+    ['¿Que información desea consultar?',
+    '1. Precios',
+    '2. Fechas y horarios de venta',
+    '3. Seguimiento de un pedido',
+    '4. Necesito hacer otra consulta no disponible en el menú',
+    '5. Terminar conversación'
+    ],
+    null,
+    null,
+    [kinder1_1_1]
+)
 
 
 
 
-const flowSecundarioKinder1 = addKeyword([
+
+const kinder1 = addKeyword([
     'Citlaltzintli'
-]).addAnswer(['Espere por favor, consultando Kinder...'])
-const flowSecundarioKinder2 = addKeyword([
-    'Adolfo Christlieb Ibarola',
-    'Adolfo',
-    'Christlieb',
-    'Ibarola',
-    'Adolfo Christlieb',
-    'Christlieb Ibarola'
-]).addAnswer(['Espere por favor, consultando Kinder...'])
-
-
-const flowSecundarioKinder3 = addKeyword([
-    'Gorgonio Cortes Carrasco',
-    'Gorgonio',
-    'Cortes',
-    'Carrasco'
 ]).addAnswer(
-    ['¿Quizas quizo decir: Gorgonio Cortes Carrasco?'],
+    ['¿Usted quiso decir “Kinder Citlaltzintli”?','1. SI','2. NO'],
     null,
     null,
-    [nombrekinder1]
+    [kinder1_1]
 )
 
 
-const flowSecundarioPrimaria = addKeyword(['24 de octubre', 'Amado Nervo']).addAnswer(['Espere por favor. consultando Primaria...'])
-const flowSecundarioSecundaria = addKeyword(['José Antonio Torres', 'Carlos González Peña','Jesús Reyes Heroles','']).addAnswer(['Espere por favor. consultando Secundaria...'])
 
-// const flowDocs = addKeyword(['doc', 'documentacion', 'documentación']).addAnswer(
-//     [
-//         '📄 Aquí encontras las documentación recuerda que puedes mejorarla',
-//         'https://bot-whatsapp.netlify.app/',
-//         '\n*2* Para siguiente paso.',
-//     ],
-//     null,
-//     null,
-//     [flowSecundario]
-// )
-
-// const flowTuto = addKeyword(['tutorial', 'tuto']).addAnswer(
-//     [
-//         '🙌 Aquí encontras un ejemplo rapido',
-//         'https://bot-whatsapp.netlify.app/docs/example/',
-//         '\n*2* Para siguiente paso.',
-//     ],
-//     null,
-//     null,
-//     [flowSecundario]
-// )
-
-// const flowGracias = addKeyword(['gracias', 'grac']).addAnswer(
-//     [
-//         '🚀 Puedes aportar tu granito de arena a este proyecto',
-//         '[*opencollective*] https://opencollective.com/bot-whatsapp',
-//         '[*buymeacoffee*] https://www.buymeacoffee.com/leifermendez',
-//         '[*patreon*] https://www.patreon.com/leifermendez',
-//         '\n*2* Para siguiente paso.',
-//     ],
-//     null,
-//     null,
-//     [flowSecundario]
-// )
-
-// const flowDiscord = addKeyword(['discord']).addAnswer(
-//     ['🤪 Únete al discord', 'https://link.codigoencasa.com/DISCORD', '\n*2* Para siguiente paso.'],
-//     null,
-//     null,
-//     [flowSecundario]
-// )
-
-const flowSecundaria = addKeyword(['3']).addAnswer(
-    ['Por favor escribe el nombre o numero de tu Secundaria'],
+const Kinder = addKeyword(['1']).addAnswer(
+    ['Has seleccionado Kínder, por favor ingresa el nombre de la escuela'],
     null,
     null,
-    [flowSecundarioSecundaria]
-)
-
-const flowPrimaria = addKeyword(['2']).addAnswer(
-    ['Por favor escribe el nombre o numero de tu Primaria'],
-    null,
-    null,
-    [flowSecundarioPrimaria]
-)
-
-const flowKinder = addKeyword(['1']).addAnswer(
-    ['Por favor escribe el nombre o numero de tu Kinder'],
-    null,
-    null,
-    [flowSecundarioKinder1, flowSecundarioKinder2, flowSecundarioKinder3]
+    [kinder1]
 )
 
 
@@ -137,7 +79,7 @@ const flowPrincipal = addKeyword(['hola', 'Hola', 'buenos dias', 'Buenos dias', 
         ],
         null,
         null,
-        [flowSecundaria, flowPrimaria, flowKinder]
+        [Kinder]
     )
 
 const main = async () => {
