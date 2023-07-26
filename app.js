@@ -56,15 +56,20 @@ const kinder1_2 = addKeyword(['2']).
 addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
 
 
-const Kinder = addKeyword(['1'])
-.addAnswer('Has seleccionado Kínder, por favor ingresa el nombre de la escuela', null, (ctx, { fallBack }) => {
-    if (!ctx.body.includes('Citlaltzintli')) return fallBack()
-})
+const kinder1 = addKeyword(['Citlaltzintli'])
 .addAnswer(
-    ['¿Usted quiso decir “Kinder Citlaltzintli”?','1. Si','2. No'],
+    ['Ustued quiso decir “Kinder Citlaltzintli” seleccione la opción deseada.','1. Si','2. No'],
     null,
     null,
     [kinder1_1,kinder1_2]
+)
+
+const Kinder = addKeyword(['1'])
+.addAnswer(
+    ['Has seleccionado Kínder, por favor ingresa el nombre de la escuela...'],
+    null,
+    null,
+    [kinder1]
 )
 
 
