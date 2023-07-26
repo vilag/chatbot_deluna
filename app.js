@@ -27,8 +27,10 @@ const MYSQL_DB_NAME = 'u690371019_gp'
  *
  * Primero declaras los submenus 1.1 y 2.1, luego el 1 y 2 y al final el principal.
  */
+const nombrekinder1 = addKeyword(['Si', 'No']).addAnswer(['Espere por favor. consultando Kinder...'])
 
-const flowSecundario = addKeyword(['a','b','c','d','e','f','g','h','i','j','k']).addAnswer(['📄 Aquí tenemos el flujo secundario'])
+
+
 
 const flowSecundarioKinder1 = addKeyword([
     'Citlaltzintli'
@@ -41,12 +43,19 @@ const flowSecundarioKinder2 = addKeyword([
     'Adolfo Christlieb',
     'Christlieb Ibarola'
 ]).addAnswer(['Espere por favor, consultando Kinder...'])
+
+
 const flowSecundarioKinder3 = addKeyword([
     'Gorgonio Cortes Carrasco',
     'Gorgonio',
     'Cortes',
     'Carrasco'
-]).addAnswer(['Espere por favor, consultando Kinder...'])
+]).addAnswer(
+    ['¿Quizas quizo decir: Gorgonio Cortes Carrasco?'],
+    null,
+    null,
+    [nombrekinder1]
+)
 
 
 const flowSecundarioPrimaria = addKeyword(['24 de octubre', 'Amado Nervo']).addAnswer(['Espere por favor. consultando Primaria...'])
