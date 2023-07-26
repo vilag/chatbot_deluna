@@ -39,15 +39,25 @@ const kinder1_1_5 = addKeyword(['5']).
 addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
 
 const kinder2_1_1 = addKeyword(['1']).
-addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Adolfo Christlieb Ibarola” (Kínder Urbi T/M)"*...'])
+addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Kinder Adolfo Christlieb Ibarola” (Kínder Urbi T/M)"*...'])
 const kinder2_1_2 = addKeyword(['2']).
-addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Adolfo Christlieb Ibarola” (Kínder Urbi T/M)"*...'])
+addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Adolfo Christlieb Ibarola” (Kínder Urbi T/M)"*...'])
 const kinder2_1_3 = addKeyword(['3']).
 addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
 const kinder2_1_4 = addKeyword(['4']).
 addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
-const kinder2_1_5 = addKeyword(['5']).
-addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
+
+const kinder3_1_1 = addKeyword(['1']).
+addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Kínder “Gorgonio Cortes Carrasco” (Kínder Urbi T/V)"*...'])
+const kinder3_1_2 = addKeyword(['2']).
+addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kínder “Gorgonio Cortes Carrasco” (Kínder Urbi T/V)"*...'])
+const kinder3_1_3 = addKeyword(['3']).
+addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
+const kinder3_1_4 = addKeyword(['4']).
+addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
+
+
+
 
 
 const kinder1_1 = addKeyword(['1'])
@@ -77,10 +87,32 @@ const kinder2_1 = addKeyword(['1'])
     ],
     null,
     null,
-    [kinder2_1_1,kinder2_1_2,kinder2_1_3,kinder2_1_4,kinder2_1_5]
+    [kinder2_1_1,kinder2_1_2,kinder2_1_3,kinder2_1_4,kinder1_1_5]
 )
 const kinder2_2 = addKeyword(['2']).
 addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
+
+const kinder3_1 = addKeyword(['1'])
+.addAnswer(
+    ['¿Que información desea consultar?',
+    '1. Precios',
+    '2. Fechas y horarios de venta',
+    '3. Seguimiento de un pedido',
+    '4. Necesito hacer otra consulta no disponible en el menú',
+    '5. Terminar conversación'
+    ],
+    null,
+    null,
+    [kinder3_1_1,kinder3_1_2,kinder3_1_3,kinder3_1_4,kinder1_1_5]
+)
+const kinder3_2 = addKeyword(['2']).
+addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
+
+
+
+
+
+
 
 
 
@@ -98,20 +130,38 @@ const kinder2 = addKeyword([
     'Christlieb Ibarola',
     'Christlieb',
     'Ibarola'
-    ],{sensitive: true})
+    ])
 .addAnswer(
     ['¿Usted quiso decir Kínder “Adolfo Christlieb Ibarola” (Kínder Urbi T/M)?','1. Si','2. No'],
     null,
     null,
     [kinder2_1,kinder2_2]
 )
+const kinder3 = addKeyword([
+    'Gorgonio Cortes Carrasco',
+    'Gorgonio Cortés Carrasco',
+    'Gorgonio Cortés',
+    'Cortés Carrasco',
+    'Gorgonio'
+    ])
+.addAnswer(
+    ['¿Usted quiso decir Kínder “Gorgonio Cortes Carrasco” (Kínder Urbi T/V)?','1. Si','2. No'],
+    null,
+    null,
+    [kinder3_1,kinder3_2]
+)
+
+
+
+
+
 
 const Kinder = addKeyword(['1'])
 .addAnswer(
     ['Has seleccionado Kínder, por favor ingresa el nombre de la escuela...'],
     null,
     null,
-    [kinder1,kinder2]
+    [kinder1,kinder2,kinder3]
 )
 
 const flowPrincipal = addKeyword(['hola', 'Hola', 'buenos dias', 'Buenos dias', 'Buenas noches', 'buenas noches', 'Buenas tardes','buenas tardes'])
