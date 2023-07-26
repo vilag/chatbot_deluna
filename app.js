@@ -98,7 +98,7 @@ const kinder2 = addKeyword([
     'Christlieb Ibarola',
     'Christlieb',
     'Ibarola'
-    ],{sensitive: true,})
+    ],{sensitive: true})
 .addAnswer(
     ['¿Usted quiso decir Kínder “Adolfo Christlieb Ibarola” (Kínder Urbi T/M)?','1. Si','2. No'],
     null,
