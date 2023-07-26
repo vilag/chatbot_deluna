@@ -41,6 +41,14 @@ const flowSecundarioKinder2 = addKeyword([
     'Adolfo Christlieb',
     'Christlieb Ibarola'
 ]).addAnswer(['Espere por favor, consultando Kinder...'])
+const flowSecundarioKinder3 = addKeyword([
+    'Gorgonio Cortes Carrasco',
+    'Gorgonio',
+    'Cortes',
+    'Carrasco'
+]).addAnswer(['Espere por favor, consultando Kinder...'])
+
+
 const flowSecundarioPrimaria = addKeyword(['24 de octubre', 'Amado Nervo']).addAnswer(['Espere por favor. consultando Primaria...'])
 const flowSecundarioSecundaria = addKeyword(['José Antonio Torres', 'Carlos González Peña','Jesús Reyes Heroles','']).addAnswer(['Espere por favor. consultando Secundaria...'])
 
@@ -104,7 +112,7 @@ const flowKinder = addKeyword(['1']).addAnswer(
     ['Por favor escribe el nombre o numero de tu Kinder'],
     null,
     null,
-    [flowSecundarioKinder1, flowSecundarioKinder2]
+    [flowSecundarioKinder1, flowSecundarioKinder2, flowSecundarioKinder3]
 )
 
 
