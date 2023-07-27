@@ -523,9 +523,7 @@ const flowPrincipal = addKeyword(['hola', 'Hola', 'buenos dias', 'Buenos dias', 
         if (!ctx.body.includes('@')) {
             return fallBack()
         }
-        if (!ctx.body.includes('?')) {
-            return fallBack()
-        }
+        
         console.log('Mensaje entrante: ',ctx.body)
     })
     .addAnswer(
