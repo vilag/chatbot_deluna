@@ -125,6 +125,9 @@ addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
 
 const Secundaria4_1_1 = addKeyword(['1']).
 addAnswer(['⌛⌛⌛ Consultando lista de precios para *Escuela Secundaria Mixta “Foránea #10”*...'])
+.addAnswer('Este mensaje envia una imagen', {
+    media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690430346/De%20Luna/Secundaria_Foranea_10_iblwzh.jpg',
+})
 const Secundaria4_1_2 = addKeyword(['2']).
 addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para *Escuela Secundaria Mixta “Foránea #10”*...'])
 const Secundaria4_1_3 = addKeyword(['3']).
