@@ -39,7 +39,7 @@ const kinder1_1_5 = addKeyword(['5']).
 addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
 
 const kinder2_1_1 = addKeyword(['1']).
-addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Kinder Adolfo Christlieb Ibarola” (Kínder Urbi T/M)"*...'])
+addAnswer(['⌛⌛⌛ Consultando lista de precios para el *Kinder "Adolfo Christlieb Ibarola” (Kínder Urbi T/M)"*...'])
 const kinder2_1_2 = addKeyword(['2']).
 addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Adolfo Christlieb Ibarola” (Kínder Urbi T/M)"*...'])
 const kinder2_1_3 = addKeyword(['3']).
@@ -125,9 +125,6 @@ addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
 
 const Secundaria4_1_1 = addKeyword(['1']).
 addAnswer(['⌛⌛⌛ Consultando lista de precios para *Escuela Secundaria Mixta “Foránea #10”*...'])
-.addAnswer('Este mensaje envia una imagen', {
-    media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690430346/De%20Luna/Secundaria_Foranea_10_iblwzh.jpg',
-})
 const Secundaria4_1_2 = addKeyword(['2']).
 addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para *Escuela Secundaria Mixta “Foránea #10”*...'])
 const Secundaria4_1_3 = addKeyword(['3']).
