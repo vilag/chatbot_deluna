@@ -56,6 +56,24 @@ addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket
 const kinder3_1_4 = addKeyword(['4']).
 addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
 
+const kinder4_1_1 = addKeyword(['1']).
+addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Kínder “José Luis Figueroa” (Kínder Chulavista T/M)"*...'])
+const kinder4_1_2 = addKeyword(['2']).
+addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kínder “José Luis Figueroa” (Kínder Chulavista T/M)"*...'])
+const kinder4_1_3 = addKeyword(['3']).
+addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
+const kinder4_1_4 = addKeyword(['4']).
+addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
+
+const kinder5_1_1 = addKeyword(['1']).
+addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Kínder “Francisco Ruiz Sánchez” (Kínder Chulavista T/V)"*...'])
+const kinder5_1_2 = addKeyword(['2']).
+addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kínder “Francisco Ruiz Sánchez” (Kínder Chulavista T/V)"*...'])
+const kinder5_1_3 = addKeyword(['3']).
+addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
+const kinder5_1_4 = addKeyword(['4']).
+addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
+
 
 
 
@@ -89,8 +107,8 @@ const kinder2_1 = addKeyword(['1'])
     null,
     [kinder2_1_1,kinder2_1_2,kinder2_1_3,kinder2_1_4,kinder1_1_5]
 )
-const kinder2_2 = addKeyword(['2']).
-addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
+// const kinder2_2 = addKeyword(['2']).
+// addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
 
 const kinder3_1 = addKeyword(['1'])
 .addAnswer(
@@ -105,8 +123,37 @@ const kinder3_1 = addKeyword(['1'])
     null,
     [kinder3_1_1,kinder3_1_2,kinder3_1_3,kinder3_1_4,kinder1_1_5]
 )
-const kinder3_2 = addKeyword(['2']).
-addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
+// const kinder3_2 = addKeyword(['2']).
+// addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
+
+const kinder4_1 = addKeyword(['1'])
+.addAnswer(
+    ['¿Que información desea consultar?',
+    '1. Precios',
+    '2. Fechas y horarios de venta',
+    '3. Seguimiento de un pedido',
+    '4. Necesito hacer otra consulta no disponible en el menú',
+    '5. Terminar conversación'
+    ],
+    null,
+    null,
+    [kinder4_1_1,kinder4_1_2,kinder4_1_3,kinder4_1_4,kinder1_1_5]
+)
+
+const kinder5_1 = addKeyword(['1'])
+.addAnswer(
+    ['¿Que información desea consultar?',
+    '1. Precios',
+    '2. Fechas y horarios de venta',
+    '3. Seguimiento de un pedido',
+    '4. Necesito hacer otra consulta no disponible en el menú',
+    '5. Terminar conversación'
+    ],
+    null,
+    null,
+    [kinder5_1_1,kinder5_1_2,kinder5_1_3,kinder5_1_4,kinder1_1_5]
+)
+
 
 
 
@@ -135,7 +182,7 @@ const kinder2 = addKeyword([
     ['¿Usted quiso decir Kínder “Adolfo Christlieb Ibarola” (Kínder Urbi T/M)?','1. Si','2. No'],
     null,
     null,
-    [kinder2_1,kinder2_2]
+    [kinder2_1,kinder1_2]
 )
 const kinder3 = addKeyword([
     'Gorgonio Cortes Carrasco',
@@ -148,7 +195,36 @@ const kinder3 = addKeyword([
     ['¿Usted quiso decir Kínder “Gorgonio Cortes Carrasco” (Kínder Urbi T/V)?','1. Si','2. No'],
     null,
     null,
-    [kinder3_1,kinder3_2]
+    [kinder3_1,kinder1_2]
+)
+
+const kinder4 = addKeyword([
+    'José Luis Figueroa',
+    'Jose Luis Figueroa',
+    'jose luis figueroa',
+    'Jose Luis',
+    'José Luis',
+    'Luis Figueroa'
+    ])
+.addAnswer(
+    ['¿Usted quiso decir Kínder “José Luis Figueroa” (Kínder Chulavista T/M)?','1. Si','2. No'],
+    null,
+    null,
+    [kinder4_1,kinder1_2]
+)
+
+const kinder5 = addKeyword([
+    'Francisco Ruiz Sánchez',
+    'Francisco Ruiz Sanchez',
+    'Francisco Ruiz',
+    'Ruiz Sanchez',
+    'Ruiz Sánchez'
+    ])
+.addAnswer(
+    ['¿Usted quiso decir Kínder “Francisco Ruiz Sánchez” (Kínder Chulavista T/V)','1. Si','2. No'],
+    null,
+    null,
+    [kinder5_1,kinder1_2]
 )
 
 
@@ -161,7 +237,7 @@ const Kinder = addKeyword(['1'])
     ['Has seleccionado Kínder, por favor ingresa el nombre de la escuela...'],
     null,
     null,
-    [kinder1,kinder2,kinder3]
+    [kinder1,kinder2,kinder3,kinder4,kinder5]
 )
 
 const flowPrincipal = addKeyword(['hola', 'Hola', 'buenos dias', 'Buenos dias', 'Buenas noches', 'buenas noches', 'Buenas tardes','buenas tardes'])
