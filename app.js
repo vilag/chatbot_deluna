@@ -519,21 +519,24 @@ const Secundaria = addKeyword(['3'])
 
 const flowPrincipal = addKeyword(['hola', 'Hola', 'buenos dias', 'Buenos dias', 'Buenas noches', 'buenas noches', 'Buenas tardes','buenas tardes'])
     .addAnswer('Hola!!! Gracias por comunicarte a *Uniformes De Luna*. Te recordamos que nuestro horario de atención es de lunes a viernes de 9:00am a 5:00pm.')
-    .addAnswer('Este mensaje envia tres botones', {
-        buttons: [{ body: 'Boton 1' }, { body: 'Boton 2' }, { body: 'Boton 3' }],
+    .addAnswer('Por favor escribe el numero de la opción deseada:',{capture:true},(ctx, {fallBack}) => {
+        if (!ctx.body.includes('@')) {
+            return fallBack()
+        }
+        console.log('Mensaje entrante: ',ctx.body)
     })
-    // .addAnswer(
-    //     [
-    //         'Por favor escribe el numero de la opción deseada:',
-    //         '',
-    //         '*1.* - Kinder',
-    //         '*2.* - Primaria',
-    //         '*3.* - Secundaria'
-    //     ],
-    //     null,
-    //     null,
-    //     [Kinder,Primaria,Secundaria]
-    // )
+    .addAnswer(
+        [
+            'Por favor escribe el numero de la opción deseada:',
+            '',
+            '*1.* - Kinder',
+            '*2.* - Primaria',
+            '*3.* - Secundaria'
+        ],
+        null,
+        null,
+        [Kinder,Primaria,Secundaria]
+    )
 
 const main = async () => {
     const adapterDB = new MySQLAdapter({
