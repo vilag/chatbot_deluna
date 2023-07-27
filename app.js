@@ -74,13 +74,74 @@ addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket
 const kinder5_1_4 = addKeyword(['4']).
 addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
 
+const Primaria1_1_1 = addKeyword(['1']).
+addAnswer(['⌛⌛⌛ Consultando lista de precios para  *Primaria "24 de octubre"*...'])
+const Primaria1_1_2 = addKeyword(['2']).
+addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para *Primaria "24 de octubre"*...'])
+const Primaria1_1_3 = addKeyword(['3']).
+addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
+const Primaria1_1_4 = addKeyword(['4']).
+addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
+const Primaria1_1_5 = addKeyword(['5']).
+addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
+
+const Primaria2_1_1 = addKeyword(['1']).
+addAnswer(['⌛⌛⌛ Consultando lista de precios para *Primaria "Amado Nervo"*...'])
+const Primaria2_1_2 = addKeyword(['2']).
+addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para *Primaria "Amado Nervo"*...'])
+const Primaria2_1_3 = addKeyword(['3']).
+addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
+const Primaria2_1_4 = addKeyword(['4']).
+addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
+
+const Secundaria1_1_1 = addKeyword(['1']).
+addAnswer(['⌛⌛⌛ Consultando lista de precios para  *Escuela Secundaria General #17 "Jose Antonio Torres"*...'])
+const Secundaria1_1_2 = addKeyword(['2']).
+addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para *Escuela Secundaria General #17 "Jose Antonio Torres"*...'])
+const Secundaria1_1_3 = addKeyword(['3']).
+addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
+const Secundaria1_1_4 = addKeyword(['4']).
+addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
+const Secundaria1_1_5 = addKeyword(['5']).
+addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
+
+const Secundaria2_1_1 = addKeyword(['1']).
+addAnswer(['⌛⌛⌛ Consultando lista de precios para *Escuela Secundaria General #132 “Carlos González Peña"*...'])
+const Secundaria2_1_2 = addKeyword(['2']).
+addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para *Escuela Secundaria General #132 “Carlos González Peña"*...'])
+const Secundaria2_1_3 = addKeyword(['3']).
+addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
+const Secundaria2_1_4 = addKeyword(['4']).
+addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
+
+const Secundaria3_1_1 = addKeyword(['1']).
+addAnswer(['⌛⌛⌛ Consultando lista de precios para *Escuela Secundaria General #64 “Jesús Reyes Heroles”*...'])
+const Secundaria3_1_2 = addKeyword(['2']).
+addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para *Escuela Secundaria General #64 “Jesús Reyes Heroles”*...'])
+const Secundaria3_1_3 = addKeyword(['3']).
+addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
+const Secundaria3_1_4 = addKeyword(['4']).
+addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
+
+const Secundaria4_1_1 = addKeyword(['1']).
+addAnswer(['⌛⌛⌛ Consultando lista de precios para *Escuela Secundaria Mixta “Foránea #10”*...'])
+const Secundaria4_1_2 = addKeyword(['2']).
+addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para *Escuela Secundaria Mixta “Foránea #10”*...'])
+const Secundaria4_1_3 = addKeyword(['3']).
+addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
+const Secundaria4_1_4 = addKeyword(['4']).
+addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
+
+
+
+
 
 
 
 
 const kinder1_1 = addKeyword(['1'])
 .addAnswer(
-    ['¿Que información desea consultar?',
+    ['*“Kinder Citlaltzintli”*','¿Que información desea consultar?','',
     '1. Precios',
     '2. Fechas y horarios de venta',
     '3. Seguimiento de un pedido',
@@ -96,7 +157,7 @@ addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
 
 const kinder2_1 = addKeyword(['1'])
 .addAnswer(
-    ['¿Que información desea consultar?',
+    ['*Kínder “Adolfo Christlieb Ibarola” (Kínder Urbi T/M)*','¿Que información desea consultar?','',
     '1. Precios',
     '2. Fechas y horarios de venta',
     '3. Seguimiento de un pedido',
@@ -112,7 +173,7 @@ const kinder2_1 = addKeyword(['1'])
 
 const kinder3_1 = addKeyword(['1'])
 .addAnswer(
-    ['¿Que información desea consultar?',
+    ['*Kínder “Gorgonio Cortes Carrasco” (Kínder Urbi T/V)*','¿Que información desea consultar?','',
     '1. Precios',
     '2. Fechas y horarios de venta',
     '3. Seguimiento de un pedido',
@@ -128,7 +189,7 @@ const kinder3_1 = addKeyword(['1'])
 
 const kinder4_1 = addKeyword(['1'])
 .addAnswer(
-    ['¿Que información desea consultar?',
+    ['*Kínder “José Luis Figueroa” (Kínder Chulavista T/M)*','¿Que información desea consultar?','',
     '1. Precios',
     '2. Fechas y horarios de venta',
     '3. Seguimiento de un pedido',
@@ -142,7 +203,7 @@ const kinder4_1 = addKeyword(['1'])
 
 const kinder5_1 = addKeyword(['1'])
 .addAnswer(
-    ['¿Que información desea consultar?',
+    ['*Kínder “Francisco Ruiz Sánchez” (Kínder Chulavista T/V)*','¿Que información desea consultar?','',
     '1. Precios',
     '2. Fechas y horarios de venta',
     '3. Seguimiento de un pedido',
@@ -152,6 +213,94 @@ const kinder5_1 = addKeyword(['1'])
     null,
     null,
     [kinder5_1_1,kinder5_1_2,kinder5_1_3,kinder5_1_4,kinder1_1_5]
+)
+
+const Primaria1_1 = addKeyword(['1'])
+.addAnswer(
+    ['*Primaria “24 de octubre”*','¿Que información desea consultar?','',
+    '1. Precios',
+    '2. Fechas y horarios de venta',
+    '3. Seguimiento de un pedido',
+    '4. Necesito hacer otra consulta no disponible en el menú',
+    '5. Terminar conversación'
+    ],
+    null,
+    null,
+    [Primaria1_1_1,Primaria1_1_2,Primaria1_1_3,Primaria1_1_4,Primaria1_1_5]
+)
+const Primaria1_2 = addKeyword(['2']).
+addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
+
+const Primaria2_1 = addKeyword(['1'])
+.addAnswer(
+    ['*Primaria “Amado Nervo”*','¿Que información desea consultar?','',
+    '1. Precios',
+    '2. Fechas y horarios de venta',
+    '3. Seguimiento de un pedido',
+    '4. Necesito hacer otra consulta no disponible en el menú',
+    '5. Terminar conversación'
+    ],
+    null,
+    null,
+    [Primaria2_1_1,Primaria2_1_2,Primaria2_1_3,Primaria2_1_4,Primaria1_1_5]
+)
+
+const Secundaria1_1 = addKeyword(['1'])
+.addAnswer(
+    ['*Escuela Secundaria General #17 "Jose Antonio Torres"*','¿Que información desea consultar?','',
+    '1. Precios',
+    '2. Fechas y horarios de venta',
+    '3. Seguimiento de un pedido',
+    '4. Necesito hacer otra consulta no disponible en el menú',
+    '5. Terminar conversación'
+    ],
+    null,
+    null,
+    [Secundaria1_1_1,Secundaria1_1_2,Secundaria1_1_3,Secundaria1_1_4,Secundaria1_1_5]
+)
+const Secundaria1_2 = addKeyword(['2']).
+addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
+
+const Secundaria2_1 = addKeyword(['1'])
+.addAnswer(
+    ['*Escuela Secundaria General #132 “Carlos González Peña"*','¿Que información desea consultar?','',
+    '1. Precios',
+    '2. Fechas y horarios de venta',
+    '3. Seguimiento de un pedido',
+    '4. Necesito hacer otra consulta no disponible en el menú',
+    '5. Terminar conversación'
+    ],
+    null,
+    null,
+    [Secundaria2_1_1,Secundaria2_1_2,Secundaria2_1_3,Secundaria2_1_4,Secundaria1_1_5]
+)
+
+const Secundaria3_1 = addKeyword(['1'])
+.addAnswer(
+    ['*Escuela Secundaria General #64 “Jesús Reyes Heroles”*','¿Que información desea consultar?','',
+    '1. Precios',
+    '2. Fechas y horarios de venta',
+    '3. Seguimiento de un pedido',
+    '4. Necesito hacer otra consulta no disponible en el menú',
+    '5. Terminar conversación'
+    ],
+    null,
+    null,
+    [Secundaria3_1_1,Secundaria3_1_2,Secundaria3_1_3,Secundaria3_1_4,Secundaria1_1_5]
+)
+
+const Secundaria4_1 = addKeyword(['1'])
+.addAnswer(
+    ['*Escuela Secundaria Mixta “Foránea #10”*','¿Que información desea consultar?','',
+    '1. Precios',
+    '2. Fechas y horarios de venta',
+    '3. Seguimiento de un pedido',
+    '4. Necesito hacer otra consulta no disponible en el menú',
+    '5. Terminar conversación'
+    ],
+    null,
+    null,
+    [Secundaria4_1_1,Secundaria4_1_2,Secundaria4_1_3,Secundaria4_1_4,Secundaria1_1_5]
 )
 
 
@@ -166,7 +315,7 @@ const kinder5_1 = addKeyword(['1'])
 
 const kinder1 = addKeyword(['Citlaltzintli'])
 .addAnswer(
-    ['¿Usted quiso decir “Kinder Citlaltzintli”?','1. Si','2. No'],
+    ['¿Usted quiso decir “Kinder Citlaltzintli”?','','*1.* Si','*2.* No'],
     null,
     null,
     [kinder1_1,kinder1_2]
@@ -179,7 +328,7 @@ const kinder2 = addKeyword([
     'Ibarola'
     ])
 .addAnswer(
-    ['¿Usted quiso decir Kínder “Adolfo Christlieb Ibarola” (Kínder Urbi T/M)?','1. Si','2. No'],
+    ['¿Usted quiso decir *Kínder “Adolfo Christlieb Ibarola” (Kínder Urbi T/M)*?','','*1.* Si','*2.* No'],
     null,
     null,
     [kinder2_1,kinder1_2]
@@ -192,7 +341,7 @@ const kinder3 = addKeyword([
     'Gorgonio'
     ])
 .addAnswer(
-    ['¿Usted quiso decir Kínder “Gorgonio Cortes Carrasco” (Kínder Urbi T/V)?','1. Si','2. No'],
+    ['¿Usted quiso decir *Kínder “Gorgonio Cortes Carrasco” (Kínder Urbi T/V)*?','','*1.* Si','*2.* No'],
     null,
     null,
     [kinder3_1,kinder1_2]
@@ -207,7 +356,7 @@ const kinder4 = addKeyword([
     'Luis Figueroa'
     ])
 .addAnswer(
-    ['¿Usted quiso decir Kínder “José Luis Figueroa” (Kínder Chulavista T/M)?','1. Si','2. No'],
+    ['¿Usted quiso decir *Kínder “José Luis Figueroa” (Kínder Chulavista T/M)*?','','*1.* Si','*2.* No'],
     null,
     null,
     [kinder4_1,kinder1_2]
@@ -221,11 +370,114 @@ const kinder5 = addKeyword([
     'Ruiz Sánchez'
     ])
 .addAnswer(
-    ['¿Usted quiso decir Kínder “Francisco Ruiz Sánchez” (Kínder Chulavista T/V)','1. Si','2. No'],
+    ['¿Usted quiso decir *Kínder “Francisco Ruiz Sánchez” (Kínder Chulavista T/V)*?','','*1.* Si','*2.* No'],
     null,
     null,
     [kinder5_1,kinder1_2]
 )
+
+const Primaria1 = addKeyword([
+    '24 de octubre'
+    ])
+.addAnswer(
+    ['¿Usted quiso decir *Primaria “24 de octubre”*?','','*1.* Si','*2.* No'],
+    null,
+    null,
+    [Primaria1_1,Primaria1_2]
+)
+
+const Primaria2 = addKeyword([
+    'Amado Nervo',
+    'Amado nervo',
+    'amado nervo',
+    'Amado',
+    'Nervo'
+    ])
+.addAnswer(
+    ['¿Usted quiso decir *Primaria “Amado Nervo”*?','','*1.* Si','*2.* No'],
+    null,
+    null,
+    [Primaria2_1,Primaria1_2]
+)
+
+const Secundaria1 = addKeyword([
+    'Escuela Secundaria General #17 "Jose Antonio Torres"',
+    'Escuela Secundaria General 17 Jose Antonio Torres',
+    'Secundaria General 17 Jose Antonio Torres',
+    'General 17 Jose Antonio Torres',
+    'General 17',
+    'Jose Antonio Torres',
+    '17',
+    'Jose Antonio'
+    ])
+.addAnswer(
+    ['¿Usted quiso decir *Escuela Secundaria General #17 "Jose Antonio Torres"*?','','*1.* Si','*2.* No'],
+    null,
+    null,
+    [Secundaria1_1,Secundaria1_2]
+)
+
+const Secundaria2 = addKeyword([
+    'Escuela Secundaria General #132 “Carlos González Peña"',
+    'Escuela Secundaria General 132 Carlos González Peña',
+    'Secundaria General 132 Carlos González Peña',
+    'General 132 Carlos González Peña',
+    'General 132',
+    'Carlos González Peña',
+    'Carlos Gonzalez Peña',
+    '132',
+    'Carlos González',
+    'Carlos Gonzalez'
+    ])
+.addAnswer(
+    ['¿Usted quiso decir *Escuela Secundaria General #132 “Carlos González Peña"*?','','*1.* Si','*2.* No'],
+    null,
+    null,
+    [Secundaria2_1,Secundaria1_2]
+)
+
+const Secundaria3 = addKeyword([
+    'Escuela Secundaria General #64 “Jesús Reyes Heroles”',
+    'Escuela Secundaria General 64 Jesús Reyes Heroles',
+    'Secundaria General 64 Jesús Reyes Heroles',
+    'Secundaria General 64 Jesus Reyes Heroles',
+    'General 64 Jesus Reyes Heroles',
+    'General 64 Jesús Reyes Heroles',
+    'Jesús Reyes Heroles',
+    'Jesus Reyes Heroles',
+    'General 64',
+    '64'
+    ])
+.addAnswer(
+    ['¿Usted quiso decir *Escuela Secundaria General #64 “Jesús Reyes Heroles”*?','','*1.* Si','*2.* No'],
+    null,
+    null,
+    [Secundaria3_1,Secundaria1_2]
+)
+
+const Secundaria4 = addKeyword([
+    'Escuela Secundaria Mixta “Foránea #10”',
+    'Escuela Secundaria Mixta Foránea 10',
+    'Escuela Secundaria Mixta Foranea 10',
+    'Secundaria Mixta Foranea 10',
+    'Secundaria Mixta Foránea 10',
+    'Secundaria Mixta',
+    'Foránea 10',
+    'Foranea 10'
+    ])
+.addAnswer(
+    ['¿Usted quiso decir *Escuela Secundaria Mixta “Foránea #10”*?','','*1.* Si','*2.* No'],
+    null,
+    null,
+    [Secundaria4_1,Secundaria1_2]
+)
+
+
+
+
+
+
+
 
 
 
@@ -234,24 +486,50 @@ const kinder5 = addKeyword([
 
 const Kinder = addKeyword(['1'])
 .addAnswer(
-    ['Has seleccionado Kínder, por favor ingresa el nombre de la escuela...'],
+    ['Has seleccionado *Kínder*, por favor ingresa el nombre de la escuela...'],
     null,
     null,
     [kinder1,kinder2,kinder3,kinder4,kinder5]
 )
+
+const Primaria = addKeyword(['2'])
+.addAnswer(
+    ['Has seleccionado *Primaria*, por favor ingresa el nombre de la escuela...'],
+    null,
+    null,
+    [Primaria1,Primaria2]
+)
+
+const Secundaria = addKeyword(['3'])
+.addAnswer(
+    ['Has seleccionado *Secundaria*, por favor ingresa el nombre o numero de la escuela...'],
+    null,
+    null,
+    [Secundaria1,Secundaria2,Secundaria3,Secundaria4]
+)
+
+
+
+
+
+
+
+
+
 
 const flowPrincipal = addKeyword(['hola', 'Hola', 'buenos dias', 'Buenos dias', 'Buenas noches', 'buenas noches', 'Buenas tardes','buenas tardes'])
     .addAnswer('Hola!!! Gracias por comunicarte a *Uniformes De Luna*. Te recordamos que nuestro horario de atención es de lunes a viernes de 9:00am a 5:00pm.')
     .addAnswer(
         [
             'Por favor escribe el numero de la opción deseada:',
-            '1. - Kinder',
-            '2. - Primaria',
-            '3. - Secundaria'
+            '',
+            '*1.* - Kinder',
+            '*2.* - Primaria',
+            '*3.* - Secundaria'
         ],
         null,
         null,
-        [Kinder]
+        [Kinder,Primaria,Secundaria]
     )
 
 const main = async () => {
