@@ -29,6 +29,12 @@ const MYSQL_DB_NAME = 'u690371019_gp'
  */
 const kinder1_1_1 = addKeyword(['1']).
 addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Kinder Citlaltzintli"*...'])
+.addAnswer('Este mensaje envia una imagen', {
+    media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690960848/De%20Luna/Citlaltzintli/Citlaltzintli_xi0ecv.jpg',
+})
+.addAnswer('Este mensaje envia una imagen', {
+    media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690960848/De%20Luna/Citlaltzintli/Citlaltzintli_2_nvfeg8.jpg',
+})
 const kinder1_1_2 = addKeyword(['2']).
 addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Citlaltzintli"*...'])
 const kinder1_1_3 = addKeyword(['3']).
@@ -531,7 +537,7 @@ const flowPrincipal = addKeyword(['hola', 'Hola', 'buenos dias', 'Buenos dias', 
         [
             'Por favor escribe el numero de la opción deseada:',
             '',
-            '*1.* - Kinder_',
+            '*1.* - Kinder',
             '*2.* - Primaria',
             '*3.* - Secundaria'
         ],
