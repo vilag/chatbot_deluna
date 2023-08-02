@@ -79,7 +79,7 @@ addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Kinder Citlaltzintl
 })
 const kinder1_1_2 = addKeyword(['2'])
 .addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Citlaltzintli"*...'])
-.addAnswer(`Lugar: *${detalle_horario}*`)
+.addAnswer('Lugar: '+detalle_horario)
 const kinder1_1_3 = addKeyword(['3']).
 addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
 const kinder1_1_4 = addKeyword(['4']).
