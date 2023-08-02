@@ -100,25 +100,25 @@ const kinder1_1_2 = addKeyword(['2'])
 )
 
 
-.addAnswer('Indica cual es tu email', null, (ctx) => {
-    //console.log('👉 Informacion del contexto: ', ctx);
+// .addAnswer('Indica cual es tu email', null, (ctx) => {
+//     //console.log('👉 Informacion del contexto: ', ctx);
 
-    let consulta = squel.select()
-    .field('idcategoria')
-    .from('categorias');
-    console.log('Consulta SQL:', consulta.toString());
-    conexion.query(consulta.toString(), function(error, registros, campos){
-        if (error) {
-            throw error;
-        }
-        registros.forEach(function(registro, indice, arreglo){
-            console.log('idcategoria:', registro.idcategoria);
-        });
-        conexion.end();
-    })
+//     let consulta = squel.select()
+//     .field('idcategoria')
+//     .from('categorias');
+//     console.log('Consulta SQL:', consulta.toString());
+//     conexion.query(consulta.toString(), function(error, registros, campos){
+//         if (error) {
+//             throw error;
+//         }
+//         registros.forEach(function(registro, indice, arreglo){
+//             console.log('idcategoria:', registro.idcategoria);
+//         });
+//         conexion.end();
+//     })
 
-})
-addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Citlaltzintli"*...'])
+// })
+.addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Citlaltzintli"*...'])
 const kinder1_1_3 = addKeyword(['3']).
 addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
 const kinder1_1_4 = addKeyword(['4']).
