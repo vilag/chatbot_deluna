@@ -565,10 +565,10 @@ const Secundaria4 = addKeyword([
 
 const Kinder = addKeyword(['1'])
 .addAnswer('Indica cual es tu email', null, (ctx) => {
-    console.log('👉 Informacion del contexto: ', ctx);
+    //console.log('👉 Informacion del contexto: ', ctx);
 
     var valor = 1;
-    console.log(valor);
+    console.log("Valor de prueba:" + valor);
 })
 .addAnswer(
     ['Has seleccionado *Kínder*, por favor ingresa el nombre de la escuela...'],
