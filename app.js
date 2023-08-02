@@ -29,23 +29,23 @@ let conexion = mysql.createConnection({
 
 conexion.connect;
 
-let consulta = squel.select()
-    .field('idcategoria')
-    .from('categorias');
+// let consulta = squel.select()
+//     .field('idcategoria')
+//     .from('categorias');
 
-console.log('Consulta SQL:', consulta.toString());
+// console.log('Consulta SQL:', consulta.toString());
 
-conexion.query(consulta.toString(), function(error, registros, campos){
-    if (error) {
-        throw error;
-    }
+// conexion.query(consulta.toString(), function(error, registros, campos){
+//     if (error) {
+//         throw error;
+//     }
 
-    registros.forEach(function(registro, indice, arreglo){
-        console.log('idcategoria:', registro.idcategoria);
-    });
+//     registros.forEach(function(registro, indice, arreglo){
+//         console.log('idcategoria:', registro.idcategoria);
+//     });
 
-    conexion.end();
-})
+//     conexion.end();
+// })
 
 
 /**
@@ -599,8 +599,20 @@ const Kinder = addKeyword(['1'])
 .addAnswer('Indica cual es tu email', null, (ctx) => {
     //console.log('👉 Informacion del contexto: ', ctx);
 
-    var valor = 1;
-    console.log("Valor de prueba:" + valor);
+    let consulta = squel.select()
+    .field('idcategoria')
+    .from('categorias');
+    console.log('Consulta SQL:', consulta.toString());
+    conexion.query(consulta.toString(), function(error, registros, campos){
+        if (error) {
+            throw error;
+        }
+        registros.forEach(function(registro, indice, arreglo){
+            console.log('idcategoria:', registro.idcategoria);
+        });
+        conexion.end();
+    })
+
 })
 .addAnswer(
     ['Has seleccionado *Kínder*, por favor ingresa el nombre de la escuela...'],
