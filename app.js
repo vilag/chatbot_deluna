@@ -45,8 +45,8 @@ conexion.query(consulta.toString(), function(error, registros, campos){
     }
 
     registros.forEach(function(registro, indice, arreglo){
-        console.log('idhorario:', registro.idhorario);
-        console.log('detalle:', registro.detalle);
+        // console.log('idhorario:', registro.idhorario);
+        // console.log('detalle:', registro.detalle);
         horarios.detalle = registro.detalle;
         detalle_horario = registro.detalle;
     });
@@ -56,8 +56,10 @@ conexion.query(consulta.toString(), function(error, registros, campos){
     conexion.end();
 })
 
-console.log(detalle_horario);
-
+  setTimeout(() => {
+    console.log("Horario guardado en viariable");
+    console.log(detalle_horario);
+  }, 2000);
 /**
  * Aqui declaramos los flujos hijos, los flujos se declaran de atras para adelante, es decir que si tienes un flujo de este tipo:
  *
