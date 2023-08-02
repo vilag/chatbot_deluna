@@ -17,35 +17,35 @@ const MYSQL_DB_NAME = 'u690371019_gp'
 //const MYSQL_DB_PORT = '3306'
 
 
-const mysql = require('mysql');
-const squel = require('squel');
+// const mysql = require('mysql');
+// const squel = require('squel');
 
-let conexion = mysql.createConnection({
-    host: 'srv366.hstgr.io',
-    user: 'u690371019_gp',
-    password: '@m?02Db3',
-    database: 'u690371019_gp'
-});
+// let conexion = mysql.createConnection({
+//     host: 'srv366.hstgr.io',
+//     user: 'u690371019_gp',
+//     password: '@m?02Db3',
+//     database: 'u690371019_gp'
+// });
 
-conexion.connect;
+// conexion.connect;
 
-let consulta = squel.select()
-    .field('idcategoria')
-    .from('categorias');
+// let consulta = squel.select()
+//     .field('idcategoria')
+//     .from('categorias');
 
-console.log('Consulta SQL:', consulta.toString());
+// console.log('Consulta SQL:', consulta.toString());
 
-conexion.query(consulta.toString(), function(error, registros, campos){
-    if (error) {
-        throw error;
-    }
+// conexion.query(consulta.toString(), function(error, registros, campos){
+//     if (error) {
+//         throw error;
+//     }
 
-    registros.forEach(function(registro, indice, arreglo){
-        console.log('idcategoria:', registro.idcategoria);
-    });
+//     registros.forEach(function(registro, indice, arreglo){
+//         console.log('idcategoria:', registro.idcategoria);
+//     });
 
-    conexion.end();
-})
+//     conexion.end();
+// })
 
 
 /**
