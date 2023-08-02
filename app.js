@@ -531,7 +531,7 @@ const flowPrincipal = addKeyword(['hola', 'Hola', 'buenos dias', 'Buenos dias', 
         [
             'Por favor escribe el numero de la opción deseada:',
             '',
-            '*1.* - Kinder',
+            '*1.* - Kinder_',
             '*2.* - Primaria',
             '*3.* - Secundaria'
         ],
