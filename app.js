@@ -67,7 +67,57 @@ addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Kinder Citlaltzintl
 .addAnswer('Lista de precios 2', {
     media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690960848/De%20Luna/Citlaltzintli/Citlaltzintli_2_nvfeg8.jpg',
 })
-const kinder1_1_2 = addKeyword(['2']).
+const kinder1_1_2 = addKeyword(['2'])
+
+.addAnswer(
+    ['Las fechas y horarios para la venta en el *Kinder Citlaltzintli* son:'],
+    { capture: true},
+
+    async (ctx, { flowDynamic, endFlow }) => {
+
+        let consulta = squel.select()
+        .field('idcategoria')
+        .from('categorias');
+        console.log('Consulta SQL:', consulta.toString());
+        conexion.query(consulta.toString(), function(error, registros, campos){
+            if (error) {
+                throw error;
+            }
+            registros.forEach(function(registro, indice, arreglo){
+
+                //nombre = ctx.body
+                return flowDynamic(`Encantado *${registro.idcategoria}*, continuamos...`)
+
+
+                console.log('idcategoria:', registro.idcategoria);
+            });
+            conexion.end();
+        })
+        
+        // nombre = ctx.body
+        // return flowDynamic(`Encantado *${nombre}*, continuamos...`)
+    }
+)
+
+
+.addAnswer('Indica cual es tu email', null, (ctx) => {
+    //console.log('👉 Informacion del contexto: ', ctx);
+
+    let consulta = squel.select()
+    .field('idcategoria')
+    .from('categorias');
+    console.log('Consulta SQL:', consulta.toString());
+    conexion.query(consulta.toString(), function(error, registros, campos){
+        if (error) {
+            throw error;
+        }
+        registros.forEach(function(registro, indice, arreglo){
+            console.log('idcategoria:', registro.idcategoria);
+        });
+        conexion.end();
+    })
+
+})
 addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Citlaltzintli"*...'])
 const kinder1_1_3 = addKeyword(['3']).
 addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
@@ -596,24 +646,6 @@ const Secundaria4 = addKeyword([
 
 
 const Kinder = addKeyword(['1'])
-.addAnswer('Indica cual es tu email', null, (ctx) => {
-    //console.log('👉 Informacion del contexto: ', ctx);
-
-    let consulta = squel.select()
-    .field('idcategoria')
-    .from('categorias');
-    console.log('Consulta SQL:', consulta.toString());
-    conexion.query(consulta.toString(), function(error, registros, campos){
-        if (error) {
-            throw error;
-        }
-        registros.forEach(function(registro, indice, arreglo){
-            console.log('idcategoria:', registro.idcategoria);
-        });
-        conexion.end();
-    })
-
-})
 .addAnswer(
     ['Has seleccionado *Kínder*, por favor ingresa el nombre de la escuela...'],
     null,
