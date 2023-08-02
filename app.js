@@ -27,26 +27,36 @@ let conexion = mysql.createConnection({
     database: 'u690371019_gp'
 });
 
+let horarios = {};
+var detalle_horario = "";
+
 conexion.connect;
 
-// let consulta = squel.select()
-//     .field('idcategoria')
-//     .from('categorias');
+let consulta = squel.select()
+    .field('idhorario')
+    .field('detalle')
+    .from('horarios_venta');
 
-// console.log('Consulta SQL:', consulta.toString());
+console.log('Consulta SQL:', consulta.toString());
 
-// conexion.query(consulta.toString(), function(error, registros, campos){
-//     if (error) {
-//         throw error;
-//     }
+conexion.query(consulta.toString(), function(error, registros, campos){
+    if (error) {
+        throw error;
+    }
 
-//     registros.forEach(function(registro, indice, arreglo){
-//         console.log('idcategoria:', registro.idcategoria);
-//     });
+    registros.forEach(function(registro, indice, arreglo){
+        console.log('idhorario:', registro.idhorario);
+        console.log('detalle:', registro.detalle);
+        horarios.detalle = registro.detalle;
+        detalle_horario = registro.detalle;
+    });
 
-//     conexion.end();
-// })
+    console.log(horarios);
 
+    conexion.end();
+})
+
+console.log(detalle_horario);
 
 /**
  * Aqui declaramos los flujos hijos, los flujos se declaran de atras para adelante, es decir que si tienes un flujo de este tipo:
@@ -68,57 +78,8 @@ addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Kinder Citlaltzintl
     media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690960848/De%20Luna/Citlaltzintli/Citlaltzintli_2_nvfeg8.jpg',
 })
 const kinder1_1_2 = addKeyword(['2'])
-
-.addAnswer(
-    ['Las fechas y horarios para la venta en el *Kinder Citlaltzintli* son:'],
-    { capture: true},
-
-
-    async (ctx, { flowDynamic, endFlow }) => {
-        var dato = "inicial";
-        let consulta = squel.select()
-        .field('idescuela')
-        .field('fecha_hora')
-        .field('detalle')
-        .from('horarios_venta');
-        console.log('Consulta SQL:', consulta.toString());
-        conexion.query(consulta.toString(), function(error, registros, campos){
-            if (error) {
-                throw error;
-            }
-            registros.forEach(function(registro, indice, arreglo){
-
-                console.log('detalle:', registro.detalle);
-                dato = registro.detalle;
-            });
-            conexion.end();
-        })
-        
-        //nombre = ctx.body
-        return flowDynamic(`Encantado *${dato}*, continuamos...`)
-    }
-)
-
-
-// .addAnswer('Indica cual es tu email', null, (ctx) => {
-//     //console.log('👉 Informacion del contexto: ', ctx);
-
-//     let consulta = squel.select()
-//     .field('idcategoria')
-//     .from('categorias');
-//     console.log('Consulta SQL:', consulta.toString());
-//     conexion.query(consulta.toString(), function(error, registros, campos){
-//         if (error) {
-//             throw error;
-//         }
-//         registros.forEach(function(registro, indice, arreglo){
-//             console.log('idcategoria:', registro.idcategoria);
-//         });
-//         conexion.end();
-//     })
-
-// })
 .addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Citlaltzintli"*...'])
+.addAnswer(`Lugar: *${detalle_horario}*`)
 const kinder1_1_3 = addKeyword(['3']).
 addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
 const kinder1_1_4 = addKeyword(['4']).
