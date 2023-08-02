@@ -1,0 +1,60 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '5213332550900@s.whatsapp.net',
+    fromMe: false,
+    id: 'A4EE20B1B07F73AF6BC63F1E32C8A357',
+    participant: undefined
+  },
+  messageTimestamp: 1691008433,
+  pushName: 'Orel',
+  broadcast: false,
+  messageStubType: 2,
+  messageStubParameters: [ 'No matching sessions found for message' ],
+  body: undefined,
+  from: '5213332550900'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5213332550900@s.whatsapp.net',
+    fromMe: false,
+    id: 'A4EE20B1B07F73AF6BC63F1E32C8A357',
+    participant: undefined
+  },
+  messageTimestamp: 1691008434,
+  pushName: 'Orel',
+  broadcast: false,
+  messageStubType: 2,
+  messageStubParameters: [ 'No matching sessions found for message' ],
+  body: undefined,
+  from: '5213332550900'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5213332550900@s.whatsapp.net',
+    fromMe: false,
+    id: '51ADDC9340D8D3027BC91EB0B1FE08DC',
+    participant: undefined
+  },
+  messageTimestamp: 1691008452,
+  pushName: 'Orel',
+  broadcast: false,
+  messageStubType: 2,
+  messageStubParameters: [ 'No matching sessions found for message' ],
+  body: undefined,
+  from: '5213332550900'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5213332550900@s.whatsapp.net',
+    fromMe: false,
+    id: '51ADDC9340D8D3027BC91EB0B1FE08DC',
+    participant: undefined
+  },
+  messageTimestamp: 1691008452,
+  pushName: 'Orel',
+  broadcast: false,
+  messageStubType: 2,
+  messageStubParameters: [ 'No matching sessions found for message' ],
+  body: undefined,
+  from: '5213332550900'
+}

@@ -168,7 +168,7 @@ addAnswer(['⌛⌛⌛ Consultando lista de precios para *Escuela Secundaria Gene
 .addAnswer('Lista de precios 1', {
     media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690962348/De%20Luna/Sec%20Gen%20132/Sec._Urbi_132_baqxj5.jpg',
 })
-.addAnswer('Lista de precios 1', {
+.addAnswer('Lista de precios 2', {
     media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690962348/De%20Luna/Sec%20Gen%20132/Sec._Urbi_132_2_culglr.jpg',
 })
 const Secundaria2_1_2 = addKeyword(['2']).
@@ -201,7 +201,7 @@ addAnswer(['⌛⌛⌛ Consultando lista de precios para *Escuela Secundaria Mixt
 .addAnswer('Lista de precios 1', {
     media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690962554/De%20Luna/Sec%20Foranea%2010/Sec._Foranea_10_icv3am.jpg',
 })
-.addAnswer('Lista de precios 1', {
+.addAnswer('Lista de precios 2', {
     media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690962554/De%20Luna/Sec%20Foranea%2010/Sec._Foranea_10_2_zknvdh.jpg',
 })
 const Secundaria4_1_2 = addKeyword(['2']).
@@ -564,6 +564,12 @@ const Secundaria4 = addKeyword([
 
 
 const Kinder = addKeyword(['1'])
+.addAnswer('Indica cual es tu email', null, (ctx) => {
+    console.log('👉 Informacion del contexto: ', ctx);
+
+    var valor = 1;
+    console.log(valor);
+})
 .addAnswer(
     ['Has seleccionado *Kínder*, por favor ingresa el nombre de la escuela...'],
     null,
