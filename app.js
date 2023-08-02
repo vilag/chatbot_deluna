@@ -29,10 +29,10 @@ const MYSQL_DB_NAME = 'u690371019_gp'
  */
 const kinder1_1_1 = addKeyword(['1']).
 addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Kinder Citlaltzintli"*...'])
-.addAnswer('Este mensaje envia una imagen', {
+.addAnswer('Lista de precios 1', {
     media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690960848/De%20Luna/Citlaltzintli/Citlaltzintli_xi0ecv.jpg',
 })
-.addAnswer('Este mensaje envia una imagen', {
+.addAnswer('Lista de precios 2', {
     media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690960848/De%20Luna/Citlaltzintli/Citlaltzintli_2_nvfeg8.jpg',
 })
 const kinder1_1_2 = addKeyword(['2']).
@@ -44,8 +44,16 @@ addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
 const kinder1_1_5 = addKeyword(['5']).
 addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
 
+
+
 const kinder2_1_1 = addKeyword(['1']).
 addAnswer(['⌛⌛⌛ Consultando lista de precios para el *Kinder "Adolfo Christlieb Ibarola” (Kínder Urbi T/M)"*...'])
+.addAnswer('Lista de precios 1', {
+    media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690961298/De%20Luna/Kinder_urbi/Kinder_Urbi_gsuo4p.jpg',
+})
+.addAnswer('Lista de precios 2', {
+    media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690961298/De%20Luna/Kinder_urbi/Kinder_Urbi_2_nu4arx.jpg',
+})
 const kinder2_1_2 = addKeyword(['2']).
 addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Adolfo Christlieb Ibarola” (Kínder Urbi T/M)"*...'])
 const kinder2_1_3 = addKeyword(['3']).
@@ -53,8 +61,16 @@ addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket
 const kinder2_1_4 = addKeyword(['4']).
 addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
 
+
+
 const kinder3_1_1 = addKeyword(['1']).
 addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Kínder “Gorgonio Cortes Carrasco” (Kínder Urbi T/V)"*...'])
+.addAnswer('Lista de precios 1', {
+    media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690961298/De%20Luna/Kinder_urbi/Kinder_Urbi_gsuo4p.jpg',
+})
+.addAnswer('Lista de precios 2', {
+    media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690961298/De%20Luna/Kinder_urbi/Kinder_Urbi_2_nu4arx.jpg',
+})
 const kinder3_1_2 = addKeyword(['2']).
 addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kínder “Gorgonio Cortes Carrasco” (Kínder Urbi T/V)"*...'])
 const kinder3_1_3 = addKeyword(['3']).
@@ -62,8 +78,16 @@ addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket
 const kinder3_1_4 = addKeyword(['4']).
 addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
 
+
+
 const kinder4_1_1 = addKeyword(['1']).
 addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Kínder “José Luis Figueroa” (Kínder Chulavista T/M)"*...'])
+.addAnswer('Lista de precios 1', {
+    media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690961707/De%20Luna/Chulavista/Kinder_Chulavista_fw6oxc.jpg',
+})
+.addAnswer('Lista de precios 2', {
+    media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690961707/De%20Luna/Chulavista/Kinder_Chulavista_2_jsmejl.jpg',
+})
 const kinder4_1_2 = addKeyword(['2']).
 addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kínder “José Luis Figueroa” (Kínder Chulavista T/M)"*...'])
 const kinder4_1_3 = addKeyword(['3']).
@@ -71,8 +95,17 @@ addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket
 const kinder4_1_4 = addKeyword(['4']).
 addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
 
+
+
+
 const kinder5_1_1 = addKeyword(['1']).
 addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Kínder “Francisco Ruiz Sánchez” (Kínder Chulavista T/V)"*...'])
+.addAnswer('Lista de precios 1', {
+    media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690961707/De%20Luna/Chulavista/Kinder_Chulavista_fw6oxc.jpg',
+})
+.addAnswer('Lista de precios 2', {
+    media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690961707/De%20Luna/Chulavista/Kinder_Chulavista_2_jsmejl.jpg',
+})
 const kinder5_1_2 = addKeyword(['2']).
 addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kínder “Francisco Ruiz Sánchez” (Kínder Chulavista T/V)"*...'])
 const kinder5_1_3 = addKeyword(['3']).
@@ -80,8 +113,14 @@ addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket
 const kinder5_1_4 = addKeyword(['4']).
 addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
 
+
+
+
 const Primaria1_1_1 = addKeyword(['1']).
 addAnswer(['⌛⌛⌛ Consultando lista de precios para  *Primaria "24 de octubre"*...'])
+.addAnswer('Lista de precios 1', {
+    media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690962050/De%20Luna/Prim%2024%20de%20octubre/Primaria_Onu_onoem2.jpg',
+})
 const Primaria1_1_2 = addKeyword(['2']).
 addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para *Primaria "24 de octubre"*...'])
 const Primaria1_1_3 = addKeyword(['3']).
@@ -90,6 +129,9 @@ const Primaria1_1_4 = addKeyword(['4']).
 addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
 const Primaria1_1_5 = addKeyword(['5']).
 addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
+
+
+
 
 const Primaria2_1_1 = addKeyword(['1']).
 addAnswer(['⌛⌛⌛ Consultando lista de precios para *Primaria "Amado Nervo"*...'])
@@ -100,8 +142,15 @@ addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket
 const Primaria2_1_4 = addKeyword(['4']).
 addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
 
+
+
+
+
 const Secundaria1_1_1 = addKeyword(['1']).
 addAnswer(['⌛⌛⌛ Consultando lista de precios para  *Escuela Secundaria General #17 "Jose Antonio Torres"*...'])
+.addAnswer('Lista de precios 1', {
+    media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690962232/De%20Luna/Sec%20General%2017/Sec._Gral._17f_xxutoa.jpg',
+})
 const Secundaria1_1_2 = addKeyword(['2']).
 addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para *Escuela Secundaria General #17 "Jose Antonio Torres"*...'])
 const Secundaria1_1_3 = addKeyword(['3']).
@@ -111,8 +160,17 @@ addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
 const Secundaria1_1_5 = addKeyword(['5']).
 addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
 
+
+
+
 const Secundaria2_1_1 = addKeyword(['1']).
 addAnswer(['⌛⌛⌛ Consultando lista de precios para *Escuela Secundaria General #132 “Carlos González Peña"*...'])
+.addAnswer('Lista de precios 1', {
+    media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690962348/De%20Luna/Sec%20Gen%20132/Sec._Urbi_132_baqxj5.jpg',
+})
+.addAnswer('Lista de precios 1', {
+    media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690962348/De%20Luna/Sec%20Gen%20132/Sec._Urbi_132_2_culglr.jpg',
+})
 const Secundaria2_1_2 = addKeyword(['2']).
 addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para *Escuela Secundaria General #132 “Carlos González Peña"*...'])
 const Secundaria2_1_3 = addKeyword(['3']).
@@ -120,8 +178,14 @@ addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket
 const Secundaria2_1_4 = addKeyword(['4']).
 addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
 
+
+
+
 const Secundaria3_1_1 = addKeyword(['1']).
 addAnswer(['⌛⌛⌛ Consultando lista de precios para *Escuela Secundaria General #64 “Jesús Reyes Heroles”*...'])
+.addAnswer('Lista de precios 1', {
+    media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690962461/De%20Luna/Sec%20Gen%2064/Sec._Gral._64_y6iglv.jpg',
+})
 const Secundaria3_1_2 = addKeyword(['2']).
 addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para *Escuela Secundaria General #64 “Jesús Reyes Heroles”*...'])
 const Secundaria3_1_3 = addKeyword(['3']).
@@ -129,8 +193,17 @@ addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket
 const Secundaria3_1_4 = addKeyword(['4']).
 addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
 
+
+
+
 const Secundaria4_1_1 = addKeyword(['1']).
 addAnswer(['⌛⌛⌛ Consultando lista de precios para *Escuela Secundaria Mixta “Foránea #10”*...'])
+.addAnswer('Lista de precios 1', {
+    media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690962554/De%20Luna/Sec%20Foranea%2010/Sec._Foranea_10_icv3am.jpg',
+})
+.addAnswer('Lista de precios 1', {
+    media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690962554/De%20Luna/Sec%20Foranea%2010/Sec._Foranea_10_2_zknvdh.jpg',
+})
 const Secundaria4_1_2 = addKeyword(['2']).
 addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para *Escuela Secundaria Mixta “Foránea #10”*...'])
 const Secundaria4_1_3 = addKeyword(['3']).
