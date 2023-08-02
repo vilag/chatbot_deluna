@@ -73,11 +73,14 @@ const kinder1_1_2 = addKeyword(['2'])
     ['Las fechas y horarios para la venta en el *Kinder Citlaltzintli* son:'],
     { capture: true},
 
-    async (ctx, { flowDynamic, endFlow }) => {
 
+    async (ctx, { flowDynamic, endFlow }) => {
+        var dato = "inicial";
         let consulta = squel.select()
-        .field('idcategoria')
-        .from('categorias');
+        .field('idescuela')
+        .field('fecha_hora')
+        .field('detalle')
+        .from('horarios_venta');
         console.log('Consulta SQL:', consulta.toString());
         conexion.query(consulta.toString(), function(error, registros, campos){
             if (error) {
@@ -85,17 +88,14 @@ const kinder1_1_2 = addKeyword(['2'])
             }
             registros.forEach(function(registro, indice, arreglo){
 
-                //nombre = ctx.body
-                return flowDynamic(`Encantado *${registro.idcategoria}*, continuamos...`)
-
-
-                console.log('idcategoria:', registro.idcategoria);
+                console.log('detalle:', registro.detalle);
+                dato = registro.detalle;
             });
             conexion.end();
         })
         
-        // nombre = ctx.body
-        // return flowDynamic(`Encantado *${nombre}*, continuamos...`)
+        //nombre = ctx.body
+        return flowDynamic(`Encantado *${dato}*, continuamos...`)
     }
 )
 
