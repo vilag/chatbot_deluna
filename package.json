@@ -9,13 +9,15 @@
     },
     "keywords": [],
     "dependencies": {
+        "@adiwajshing/baileys": "github:WhiskeySockets/Baileys",
+        "@adiwajshing/keyed-db": "^0.2.4",
         "@bot-whatsapp/bot": "latest",
         "@bot-whatsapp/cli": "latest",
         "@bot-whatsapp/database": "latest",
-        "@bot-whatsapp/provider": "latest",
         "@bot-whatsapp/portal": "latest",
-        "@adiwajshing/baileys": "github:WhiskeySockets/Baileys",
-        "@adiwajshing/keyed-db": "^0.2.4",
+        "@bot-whatsapp/provider": "latest",
+        "mysql": "^2.18.1",
+        "squel": "^5.13.0",
         "wa-sticker-formatter": "4.3.2"
     },
     "author": "",
