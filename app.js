@@ -182,78 +182,78 @@ const squel = require('squel');
         // .addAnswer('Hora: '+horario1)
         // .addAnswer(detalle1)
         const kinder1_1_3 = addKeyword(['3'])
-        .addAnswer(
-            ['Por favor ingrese el *folio* que se encuentra en su ticket'],
-            { capture: true},
+        // .addAnswer(
+        //     ['Por favor ingrese el *folio* que se encuentra en su ticket'],
+        //     { capture: true},
     
-            async (ctx, { flowDynamic, endFlow }) => {
+        //     async (ctx, { flowDynamic, endFlow }) => {
                 
-                nombre = ctx.body
-                console.log("Valor capturado");
-                console.log(nombre);
-
-                
-
-                let conexion = mysql.createConnection({
-                    host: 'srv366.hstgr.io',
-                    user: 'u690371019_gp',
-                    password: '@m?02Db3',
-                    database: 'u690371019_gp'
-                });
+        //         nombre = ctx.body
+        //         console.log("Valor capturado");
+        //         console.log(nombre);
 
                 
 
-                let folios = [];
-                let folio_ind = {};
+        //         let conexion = mysql.createConnection({
+        //             host: 'srv366.hstgr.io',
+        //             user: 'u690371019_gp',
+        //             password: '@m?02Db3',
+        //             database: 'u690371019_gp'
+        //         });
 
-                conexion.connect;
+                
 
-                let consulta_folio = squel.select()
-                        .field('idhorario')
-                        .field('idescuela')
-                        .field('nom_esc')
-                        .field('fecha')
-                        .field('horario')
-                        .field('detalle')
-                        .from('horarios_venta')
-                        .where('idhorario = '+nombre);
+        //         let folios = [];
+        //         let folio_ind = {};
 
-                    console.log('Consulta SQL:', consulta_folio.toString());
+        //         conexion.connect;
 
-                    conexion.query(consulta_folio.toString(), function(error, registros_folio, campos){
-                        if (error) {
-                            throw error;
-                        }
+        //         let consulta_folio = squel.select()
+        //                 .field('idhorario')
+        //                 .field('idescuela')
+        //                 .field('nom_esc')
+        //                 .field('fecha')
+        //                 .field('horario')
+        //                 .field('detalle')
+        //                 .from('horarios_venta')
+        //                 .where('idhorario = '+nombre);
 
-                        registros_folio.forEach(function(registro_folio, indice, arreglo){
-                            folio_ind.idhorario = registro_folio.idhorario;
-                            folio_ind.detalle = registro_folio.detalle;
-                            folios.push(folio_ind);
-                        });
+        //             console.log('Consulta SQL:', consulta_folio.toString());
 
-                        console.log("numero de folios");
-                        console.log(folios.length);
+        //             conexion.query(consulta_folio.toString(), function(error, registros_folio, campos){
+        //                 if (error) {
+        //                     throw error;
+        //                 }
 
-                        console.log("Arreglo de folios");
-                        console.log(folios);
+        //                 registros_folio.forEach(function(registro_folio, indice, arreglo){
+        //                     folio_ind.idhorario = registro_folio.idhorario;
+        //                     folio_ind.detalle = registro_folio.detalle;
+        //                     folios.push(folio_ind);
+        //                 });
+
+        //                 console.log("numero de folios");
+        //                 console.log(folios.length);
+
+        //                 console.log("Arreglo de folios");
+        //                 console.log(folios);
 
 
-                        var valor;
-                        for (let index = 0; index < folios.length; index++) {
-                            if (folios[index].idhorario==nombre) {
-                                valor = folios[index].detalle
-                            }
-                        }
+        //                 var valor;
+        //                 for (let index = 0; index < folios.length; index++) {
+        //                     if (folios[index].idhorario==nombre) {
+        //                         valor = folios[index].detalle
+        //                     }
+        //                 }
 
-                        conexion.end();
+        //                 conexion.end();
 
-                        return flowDynamic(`Encantado *${valor}*, continuamos...`)
+        //                 return flowDynamic(`Estatus: *${valor}*`)
 
                         
 
-                    }) 
-            }
-        )
+        //             }) 
+        //     }
+        // )
         .addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
         const kinder1_1_4 = addKeyword(['4']).
         addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
