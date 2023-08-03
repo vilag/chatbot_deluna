@@ -191,6 +191,16 @@ conexion.query(consulta.toString(), function(error, registros, campos){
                 nombre = ctx.body
                 console.log("Valor capturado");
                 console.log(nombre);
+
+                conexion.connect;
+                
+                let conexion = mysql.createConnection({
+                    host: 'srv366.hstgr.io',
+                    user: 'u690371019_gp',
+                    password: '@m?02Db3',
+                    database: 'u690371019_gp'
+                });
+
                 let folios = [];
                 let folio_ind = {};
 
