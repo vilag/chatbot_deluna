@@ -192,8 +192,8 @@ conexion.query(consulta.toString(), function(error, registros, campos){
                 console.log("Valor capturado");
                 console.log(nombre);
 
-                conexion.connect;
                 
+
                 let conexion = mysql.createConnection({
                     host: 'srv366.hstgr.io',
                     user: 'u690371019_gp',
@@ -201,8 +201,12 @@ conexion.query(consulta.toString(), function(error, registros, campos){
                     database: 'u690371019_gp'
                 });
 
+                
+
                 let folios = [];
                 let folio_ind = {};
+
+                conexion.connect;
 
                 let consulta_folio = squel.select()
                         .field('idhorario')
