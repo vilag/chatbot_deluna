@@ -225,8 +225,8 @@ conexion.query(consulta.toString(), function(error, registros, campos){
 
                         var valor;
                         for (let index = 0; index < horarios.length; index++) {
-                            if (horarios[index].idhorario==nombre) {
-                                valor = horarios[index].detalle
+                            if (folios[index].idhorario==nombre) {
+                                valor = folios[index].detalle
                             }
                         }
 
