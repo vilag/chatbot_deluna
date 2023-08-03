@@ -27,13 +27,22 @@ let conexion = mysql.createConnection({
     database: 'u690371019_gp'
 });
 
-let horarios = {};
-var detalle_horario = "";
+let horarios = [];
+let hora_ind = {};
+
+var fecha1;
+var horario1;
+var detalle1;
+
 
 conexion.connect;
 
 let consulta = squel.select()
     .field('idhorario')
+    .field('idescuela')
+    .field('nom_esc')
+    .field('fecha')
+    .field('horario')
     .field('detalle')
     .from('horarios_venta');
 
@@ -45,11 +54,27 @@ conexion.query(consulta.toString(), function(error, registros, campos){
     }
 
     registros.forEach(function(registro, indice, arreglo){
-        horarios.detalle = registro.detalle;
-        detalle_horario = registro.detalle;
+        hora_ind.idhorario = registro.idhorario;
+        hora_ind.idescuela = registro.idescuela;
+        hora_ind.nom_esc = registro.nom_esc;
+        hora_ind.fecha = registro.fecha;
+        hora_ind.horario = registro.horario;
+        hora_ind.detalle = registro.detalle;
+        horarios.push(hora_ind);
     });
 
-    console.log(detalle_horario);
+    console.log("Arreglo de horarios");
+    console.log(horarios);
+
+    for (let index = 0; index < horarios.length; index++) {
+        if (index==0) {
+            fecha1 = horarios[index].fecha;
+            horario1 = horarios[index].horario;
+            detalle1 = horarios[index].detalle;
+        }
+
+        
+    }
 
 
     const kinder1_1_1 = addKeyword(['1']).
@@ -62,7 +87,9 @@ conexion.query(consulta.toString(), function(error, registros, campos){
     })
     const kinder1_1_2 = addKeyword(['2'])
     .addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Citlaltzintli"*...'])
-    .addAnswer('Lugar: '+detalle_horario)
+    .addAnswer('Fecha: '+fecha1)
+    .addAnswer('Hora: '+horario1)
+    .addAnswer(detalle1)
     const kinder1_1_3 = addKeyword(['3']).
     addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
     const kinder1_1_4 = addKeyword(['4']).
