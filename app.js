@@ -39,27 +39,24 @@ let consulta = squel.select()
 
 console.log('Consulta SQL:', consulta.toString());
 
-conexion.query(consulta.toString(), function(error, registros, campos){
-    if (error) {
-        throw error;
-    }
+// conexion.query(consulta.toString(), function(error, registros, campos){
+//     if (error) {
+//         throw error;
+//     }
 
-    registros.forEach(function(registro, indice, arreglo){
-        // console.log('idhorario:', registro.idhorario);
-        // console.log('detalle:', registro.detalle);
-        horarios.detalle = registro.detalle;
-        detalle_horario = registro.detalle;
-    });
+//     registros.forEach(function(registro, indice, arreglo){
+//         // console.log('idhorario:', registro.idhorario);
+//         // console.log('detalle:', registro.detalle);
+//         horarios.detalle = registro.detalle;
+//         detalle_horario = registro.detalle;
+//     });
 
-    console.log(horarios);
+//     console.log(horarios);
 
-    conexion.end();
-})
+//     conexion.end();
+// })
 
-  setTimeout(() => {
-    console.log("Horario guardado en variable");
-    console.log(detalle_horario);
-  }, 2000);
+ 
 /**
  * Aqui declaramos los flujos hijos, los flujos se declaran de atras para adelante, es decir que si tienes un flujo de este tipo:
  *
@@ -79,10 +76,26 @@ addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Kinder Citlaltzintl
 .addAnswer('Lista de precios 2', {
     media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690960848/De%20Luna/Citlaltzintli/Citlaltzintli_2_nvfeg8.jpg',
 })
-var det_prueba = "ddddd";
+
+conexion.query(consulta.toString(), function(error, registros, campos){
+    if (error) {
+        throw error;
+    }
+    registros.forEach(function(registro, indice, arreglo){
+        // console.log('idhorario:', registro.idhorario);
+        // console.log('detalle:', registro.detalle);
+        horarios.detalle = registro.detalle;
+        detalle_horario = registro.detalle;
+    });
+
+    console.log(horarios);
+
+    conexion.end();
+})
+
 const kinder1_1_2 = addKeyword(['2'])
 .addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Citlaltzintli"*...'])
-.addAnswer('Lugar: '+det_prueba)
+.addAnswer('Lugar: '+detalle_horario)
 const kinder1_1_3 = addKeyword(['3']).
 addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
 const kinder1_1_4 = addKeyword(['4']).
