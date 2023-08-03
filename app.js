@@ -189,7 +189,8 @@ conexion.query(consulta.toString(), function(error, registros, campos){
             async (ctx, { flowDynamic, endFlow }) => {
                 
                 nombre = ctx.body
-
+                console.log("Valor capturado");
+                console.log(nombre);
                 let folios = [];
                 let folio_ind = {};
 
@@ -224,7 +225,7 @@ conexion.query(consulta.toString(), function(error, registros, campos){
 
 
                         var valor;
-                        for (let index = 0; index < horarios.length; index++) {
+                        for (let index = 0; index < folios.length; index++) {
                             if (folios[index].idhorario==nombre) {
                                 valor = folios[index].detalle
                             }
