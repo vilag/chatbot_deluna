@@ -20,151 +20,151 @@ const MYSQL_DB_NAME = 'u690371019_gp'
 const mysql = require('mysql');
 const squel = require('squel');
 
-let conexion = mysql.createConnection({
-    host: 'srv366.hstgr.io',
-    user: 'u690371019_gp',
-    password: '@m?02Db3',
-    database: 'u690371019_gp'
-});
+// let conexion = mysql.createConnection({
+//     host: 'srv366.hstgr.io',
+//     user: 'u690371019_gp',
+//     password: '@m?02Db3',
+//     database: 'u690371019_gp'
+// });
 
-let horarios = [];
-let hora_ind = {};
+// let horarios = [];
+// let hora_ind = {};
 
-var fecha1;
-var horario1;
-var detalle1;
+// var fecha1;
+// var horario1;
+// var detalle1;
 
-var fecha2;
-var horario2;
-var detalle2;
+// var fecha2;
+// var horario2;
+// var detalle2;
 
-var fecha3;
-var horario3;
-var detalle3;
+// var fecha3;
+// var horario3;
+// var detalle3;
 
-var fecha4;
-var horario4;
-var detalle4;
+// var fecha4;
+// var horario4;
+// var detalle4;
 
-var fecha5;
-var horario5;
-var detalle5;
+// var fecha5;
+// var horario5;
+// var detalle5;
 
-var fecha6;
-var horario6;
-var detalle6;
+// var fecha6;
+// var horario6;
+// var detalle6;
 
-var fecha7;
-var horario7;
-var detalle7;
+// var fecha7;
+// var horario7;
+// var detalle7;
 
-var fecha8;
-var horario8;
-var detalle8;
+// var fecha8;
+// var horario8;
+// var detalle8;
 
-var fecha9;
-var horario9;
-var detalle9;
+// var fecha9;
+// var horario9;
+// var detalle9;
 
-var fecha10;
-var horario10;
-var detalle10;
+// var fecha10;
+// var horario10;
+// var detalle10;
 
-var fecha11;
-var horario11;
-var detalle11;
+// var fecha11;
+// var horario11;
+// var detalle11;
 
 
-conexion.connect;
+// conexion.connect;
 
-let consulta = squel.select()
-    .field('idhorario')
-    .field('idescuela')
-    .field('nom_esc')
-    .field('fecha')
-    .field('horario')
-    .field('detalle')
-    .from('horarios_venta');
+// let consulta = squel.select()
+//     .field('idhorario')
+//     .field('idescuela')
+//     .field('nom_esc')
+//     .field('fecha')
+//     .field('horario')
+//     .field('detalle')
+//     .from('horarios_venta');
 
-console.log('Consulta SQL:', consulta.toString());
+// console.log('Consulta SQL:', consulta.toString());
 
-conexion.query(consulta.toString(), function(error, registros, campos){
-    if (error) {
-        throw error;
-    }
+// conexion.query(consulta.toString(), function(error, registros, campos){
+//     if (error) {
+//         throw error;
+//     }
 
-    registros.forEach(function(registro, indice, arreglo){
-        hora_ind.idhorario = registro.idhorario;
-        hora_ind.idescuela = registro.idescuela;
-        hora_ind.nom_esc = registro.nom_esc;
-        hora_ind.fecha = registro.fecha;
-        hora_ind.horario = registro.horario;
-        hora_ind.detalle = registro.detalle;
-        horarios.push(hora_ind);
-    });
+//     registros.forEach(function(registro, indice, arreglo){
+//         hora_ind.idhorario = registro.idhorario;
+//         hora_ind.idescuela = registro.idescuela;
+//         hora_ind.nom_esc = registro.nom_esc;
+//         hora_ind.fecha = registro.fecha;
+//         hora_ind.horario = registro.horario;
+//         hora_ind.detalle = registro.detalle;
+//         horarios.push(hora_ind);
+//     });
 
-    console.log("Arreglo de horarios");
-    console.log(horarios);
+//     console.log("Arreglo de horarios");
+//     console.log(horarios);
 
-    for (let index = 0; index < horarios.length; index++) {
-        if (index==0) {
-            fecha1 = horarios[index].fecha;
-            horario1 = horarios[index].horario;
-            detalle1 = horarios[index].detalle;
-        }
-        if (index==1) {
-            fecha2 = horarios[index].fecha;
-            horario2 = horarios[index].horario;
-            detalle2 = horarios[index].detalle;
-        }
-        if (index==2) {
-            fecha3 = horarios[index].fecha;
-            horario3 = horarios[index].horario;
-            detalle3 = horarios[index].detalle;
-        }
-        if (index==3) {
-            fecha4 = horarios[index].fecha;
-            horario4 = horarios[index].horario;
-            detalle4 = horarios[index].detalle;
-        }
-        if (index==4) {
-            fecha5 = horarios[index].fecha;
-            horario5 = horarios[index].horario;
-            detalle5 = horarios[index].detalle;
-        }
-        if (index==5) {
-            fecha6 = horarios[index].fecha;
-            horario6 = horarios[index].horario;
-            detalle6 = horarios[index].detalle;
-        }
-        if (index==6) {
-            fecha7 = horarios[index].fecha;
-            horario7 = horarios[index].horario;
-            detalle7 = horarios[index].detalle;
-        }
-        if (index==7) {
-            fecha8 = horarios[index].fecha;
-            horario8 = horarios[index].horario;
-            detalle8 = horarios[index].detalle;
-        }
-        if (index==8) {
-            fecha9 = horarios[index].fecha;
-            horario9 = horarios[index].horario;
-            detalle9 = horarios[index].detalle;
-        }
-        if (index==9) {
-            fecha10 = horarios[index].fecha;
-            horario10 = horarios[index].horario;
-            detalle10 = horarios[index].detalle;
-        }
-        if (index==10) {
-            fecha11 = horarios[index].fecha;
-            horario11 = horarios[index].horario;
-            detalle11 = horarios[index].detalle;
-        }
+//     for (let index = 0; index < horarios.length; index++) {
+//         if (index==0) {
+//             fecha1 = horarios[index].fecha;
+//             horario1 = horarios[index].horario;
+//             detalle1 = horarios[index].detalle;
+//         }
+//         if (index==1) {
+//             fecha2 = horarios[index].fecha;
+//             horario2 = horarios[index].horario;
+//             detalle2 = horarios[index].detalle;
+//         }
+//         if (index==2) {
+//             fecha3 = horarios[index].fecha;
+//             horario3 = horarios[index].horario;
+//             detalle3 = horarios[index].detalle;
+//         }
+//         if (index==3) {
+//             fecha4 = horarios[index].fecha;
+//             horario4 = horarios[index].horario;
+//             detalle4 = horarios[index].detalle;
+//         }
+//         if (index==4) {
+//             fecha5 = horarios[index].fecha;
+//             horario5 = horarios[index].horario;
+//             detalle5 = horarios[index].detalle;
+//         }
+//         if (index==5) {
+//             fecha6 = horarios[index].fecha;
+//             horario6 = horarios[index].horario;
+//             detalle6 = horarios[index].detalle;
+//         }
+//         if (index==6) {
+//             fecha7 = horarios[index].fecha;
+//             horario7 = horarios[index].horario;
+//             detalle7 = horarios[index].detalle;
+//         }
+//         if (index==7) {
+//             fecha8 = horarios[index].fecha;
+//             horario8 = horarios[index].horario;
+//             detalle8 = horarios[index].detalle;
+//         }
+//         if (index==8) {
+//             fecha9 = horarios[index].fecha;
+//             horario9 = horarios[index].horario;
+//             detalle9 = horarios[index].detalle;
+//         }
+//         if (index==9) {
+//             fecha10 = horarios[index].fecha;
+//             horario10 = horarios[index].horario;
+//             detalle10 = horarios[index].detalle;
+//         }
+//         if (index==10) {
+//             fecha11 = horarios[index].fecha;
+//             horario11 = horarios[index].horario;
+//             detalle11 = horarios[index].detalle;
+//         }
 
         
-    }
+//     }
 
 
 
@@ -245,7 +245,11 @@ conexion.query(consulta.toString(), function(error, registros, campos){
                             }
                         }
 
+                        conexion.end();
+
                         return flowDynamic(`Encantado *${valor}*, continuamos...`)
+
+                        
 
                     }) 
             }
@@ -855,8 +859,8 @@ conexion.query(consulta.toString(), function(error, registros, campos){
         main()
  
 
-    conexion.end();
-})
+//     conexion.end();
+// })
 
  
 /**
