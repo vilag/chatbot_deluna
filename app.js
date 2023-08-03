@@ -191,20 +191,20 @@ conexion.query(consulta.toString(), function(error, registros, campos){
                 nombre = ctx.body
                 console.log("Valor capturado");
                 console.log(nombre);
-                // let folios = [];
-                // let folio_ind = {};
+                let folios = [];
+                let folio_ind = {};
 
-                // let consulta_folio = squel.select()
-                //         .field('idhorario')
-                //         .field('idescuela')
-                //         .field('nom_esc')
-                //         .field('fecha')
-                //         .field('horario')
-                //         .field('detalle')
-                //         .from('horarios_venta')
-                //         .where('idhorario = '+nombre);
+                let consulta_folio = squel.select()
+                        .field('idhorario')
+                        .field('idescuela')
+                        .field('nom_esc')
+                        .field('fecha')
+                        .field('horario')
+                        .field('detalle')
+                        .from('horarios_venta');
+                        // .where('idhorario = '+nombre);
 
-                //     console.log('Consulta SQL:', consulta_folio.toString());
+                    console.log('Consulta SQL:', consulta_folio.toString());
 
                 //     conexion.query(consulta_folio.toString(), function(error, registros_folio, campos){
                 //         if (error) {
