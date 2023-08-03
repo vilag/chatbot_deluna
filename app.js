@@ -206,34 +206,34 @@ conexion.query(consulta.toString(), function(error, registros, campos){
 
                     console.log('Consulta SQL:', consulta_folio.toString());
 
-                //     conexion.query(consulta_folio.toString(), function(error, registros_folio, campos){
-                //         if (error) {
-                //             throw error;
-                //         }
+                    conexion.query(consulta_folio.toString(), function(error, registros_folio, campos){
+                        if (error) {
+                            throw error;
+                        }
 
-                //         registros_folio.forEach(function(registro_folio, indice, arreglo){
-                //             folio_ind.idhorario = registro_folio.idhorario;
-                //             folio_ind.detalle = registro_folio.detalle;
-                //             folios.push(folio_ind);
-                //         });
+                        registros_folio.forEach(function(registro_folio, indice, arreglo){
+                            folio_ind.idhorario = registro_folio.idhorario;
+                            folio_ind.detalle = registro_folio.detalle;
+                            folios.push(folio_ind);
+                        });
 
-                //         console.log("numero de folios");
-                //         console.log(folios.length);
+                        console.log("numero de folios");
+                        console.log(folios.length);
 
-                //         console.log("Arreglo de folios");
-                //         console.log(folios);
+                        console.log("Arreglo de folios");
+                        console.log(folios);
 
 
-                //         var valor;
-                //         for (let index = 0; index < folios.length; index++) {
-                //             if (folios[index].idhorario==nombre) {
-                //                 valor = folios[index].detalle
-                //             }
-                //         }
+                        var valor;
+                        for (let index = 0; index < folios.length; index++) {
+                            if (folios[index].idhorario==nombre) {
+                                valor = folios[index].detalle
+                            }
+                        }
 
                         return flowDynamic(`Encantado *${nombre}*, continuamos...`)
 
-                   // }) 
+                    }) 
             }
         )
         .addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
