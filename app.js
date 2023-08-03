@@ -57,7 +57,7 @@ conexion.query(consulta.toString(), function(error, registros, campos){
 })
 
   setTimeout(() => {
-    console.log("Horario guardado en viariable");
+    console.log("Horario guardado en variable");
     console.log(detalle_horario);
   }, 2000);
 /**
@@ -79,9 +79,10 @@ addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Kinder Citlaltzintl
 .addAnswer('Lista de precios 2', {
     media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690960848/De%20Luna/Citlaltzintli/Citlaltzintli_2_nvfeg8.jpg',
 })
+var det_prueba = "ddddd";
 const kinder1_1_2 = addKeyword(['2'])
 .addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Citlaltzintli"*...'])
-.addAnswer('Lugar: '+detalle_horario)
+.addAnswer('Lugar: '+det_prueba)
 const kinder1_1_3 = addKeyword(['3']).
 addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
 const kinder1_1_4 = addKeyword(['4']).
