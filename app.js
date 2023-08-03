@@ -245,7 +245,7 @@ conexion.query(consulta.toString(), function(error, registros, campos){
                             }
                         }
 
-                        return flowDynamic(`Encantado *${nombre}*, continuamos...`)
+                        return flowDynamic(`Encantado *${valor}*, continuamos...`)
 
                     }) 
             }
