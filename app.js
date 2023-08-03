@@ -201,8 +201,8 @@ conexion.query(consulta.toString(), function(error, registros, campos){
                         .field('fecha')
                         .field('horario')
                         .field('detalle')
-                        .from('horarios_venta');
-                        // .where('idhorario = '+nombre);
+                        .from('horarios_venta')
+                        .where('idhorario = '+nombre);
 
                     console.log('Consulta SQL:', consulta_folio.toString());
 
