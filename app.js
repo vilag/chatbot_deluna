@@ -206,6 +206,7 @@ const squel = require('squel');
                         .field('hora1')
                         .field('hora2')
                         .field('detalle')
+                        .from('detalle_escuelas')
                         .where('idescuela = '+1);
 
                     console.log('Consulta SQL:', consulta_horario.toString());
@@ -250,6 +251,7 @@ const squel = require('squel');
         // .addAnswer('Hora: '+horario1)
         // .addAnswer(detalle1)
         const kinder1_1_3 = addKeyword(['3'])
+        .addAnswer(['⌛⌛⌛ ...'])
         // .addAnswer(
         //     ['Por favor ingrese el *folio* que se encuentra en su ticket'],
         //     { capture: true},
