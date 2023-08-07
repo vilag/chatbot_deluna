@@ -207,7 +207,7 @@ const squel = require('squel');
                         .field('hora2')
                         .field('detalle')
                         .from('detalle_escuelas')
-                        .where('idescuela = '+1);
+                        .where('idescuela = 1');
 
                     console.log('Consulta SQL:', consulta_horario.toString());
 
