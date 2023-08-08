@@ -228,6 +228,7 @@ const squel = require('squel');
                     }) 
             }
         )
+        .addAnswer(['Continuamos...'])
         const kinder1_1_3 = addKeyword(['3'])
         .addAnswer(['⌛⌛⌛ ...'])
         // .addAnswer(
