@@ -236,8 +236,10 @@ const squel = require('squel');
                         for (let index = 0; index < horarios.length; index++) {
                            
                                 valor = "Fecha: "+horarios[index].fecha+", Horario: "+horarios[index].hora1+" - "+horarios[index].hora2;
-                            horarios_a.push(valor);
-                            horarios_a.push("\n-");
+                                horarios_a.push((index+1)+" - ");
+                                horarios_a.push(valor);
+                                horarios_a.push("\n\n");
+                                
                         }
 
                         conexion.end();
