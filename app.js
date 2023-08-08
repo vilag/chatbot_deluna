@@ -179,7 +179,7 @@ const squel = require('squel');
         const kinder1_1_2 = addKeyword(['2'])
         // .addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Citlaltzintli"*...'])
         .addAnswer(
-            ['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Citlaltzintli"*...'],
+            ['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Citlaltzintli_"*...'],
             { capture: true},
     
             async (ctx, { flowDynamic, endFlow }) => {
@@ -221,7 +221,7 @@ const squel = require('squel');
                             horas_ind.hora1 = registro_horario.hora1;
                             horas_ind.hora2 = registro_horario.hora2;
                             horas_ind.detalle = registro_horario.detalle;
-                            folios.push(horas_ind);
+                            horarios.push(horas_ind);
                         });
 
                         console.log("numero de horarios");

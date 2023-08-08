@@ -1,0 +1,50 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '5213332550900@s.whatsapp.net',
+    fromMe: false,
+    id: 'A350588355495C0E2652D932DDF6EE17',
+    participant: undefined
+  },
+  messageTimestamp: 1691474916,
+  pushName: 'Orel',
+  broadcast: false,
+  messageStubType: 2,
+  messageStubParameters: [ 'No matching sessions found for message' ],
+  body: undefined,
+  from: '5213332550900'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5213332550900@s.whatsapp.net',
+    fromMe: false,
+    id: 'A350588355495C0E2652D932DDF6EE17',
+    participant: undefined
+  },
+  messageTimestamp: 1691474917,
+  pushName: 'Orel',
+  broadcast: false,
+  messageStubType: 2,
+  messageStubParameters: [ 'No matching sessions found for message' ],
+  body: undefined,
+  from: '5213332550900'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5213332550900@s.whatsapp.net',
+    fromMe: false,
+    id: 'A350588355495C0E2652D932DDF6EE17',
+    participant: undefined
+  },
+  messageTimestamp: 1691474917,
+  pushName: 'Orel',
+  broadcast: false,
+  message: Message {
+    conversation: 'Hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Hola',
+  from: '5213332550900'
+}
