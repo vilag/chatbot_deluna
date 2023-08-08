@@ -241,7 +241,7 @@ const squel = require('squel');
 
                         conexion.end();
 
-                        return flowDynamic(`*${valor}*`)
+                        return flowDynamic(`*${horarios_a}*`)
 
                         
 
