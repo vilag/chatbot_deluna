@@ -219,14 +219,16 @@ const squel = require('squel');
                         var valor;
                         for (let index = 0; index < horarios.length; index++) {                        
                                 valor = "- Fecha: "+horarios[index].fecha+"\n- Horario: "+horarios[index].hora1+" - "+horarios[index].hora2+"\n- Nota: "+horarios[index].detalle;
-                                horarios_a.push("*********\n");
+                                //horarios_a.push("*********\n");
                                 //horarios_a.push(("("+index+1)+")\n");
-                                horarios_a.push(valor+"\n");
-                                horarios_a.push("*********");
-                                horarios_a.push("\n\n");                            
+                                horarios_a.push(valor);
+                                //horarios_a.push("*********");
+                               // horarios_a.push("\n\n");                            
                         }
                         conexion.end();
-                        return flowDynamic('Fecha y hora de venta para *Kinder Citlaltzintli*\n\n'+`${horarios}\n\n¿Puedo ayudarte con algo más?\n\nEscribe *Menu* para regresar al Menú principal`)
+                        console.log("Array de horarios");
+                        console.log(horarios_a);
+                        return flowDynamic('Fecha y hora de venta para *Kinder Citlaltzintli*\n\n'+`${horarios_a}\n\n¿Puedo ayudarte con algo más?\n\nEscribe *Menu* para regresar al Menú principal`)
                     }) 
             }
         )
