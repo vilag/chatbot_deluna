@@ -181,25 +181,20 @@ const squel = require('squel');
         .addAnswer(
             ['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Citlaltzintli_"*...'],
             { capture: true},
-    
-            async (ctx, { flowDynamic, endFlow }) => {
-                
+            async (ctx, { flowDynamic, endFlow }) => {               
                 nombre = ctx.body
                 console.log("Valor capturado");
                 console.log(nombre);
                 let horarios = [];
                 let horarios_a = [];
                 let horas_ind = {};
-
                 let conexion = mysql.createConnection({
                     host: 'srv366.hstgr.io',
                     user: 'u690371019_deluna',
                     password: '4ZaZ>]qkFOn#',
                     database: 'u690371019_deluna'
                 });
-
                 conexion.connect;
-
                 let consulta_horario = squel.select()
                         .field('iddetalle')
                         .field('idescuela')
@@ -209,14 +204,11 @@ const squel = require('squel');
                         .field('detalle')
                         .from('detalle_escuelas')
                         .where('idescuela ='+nombre);
-
                     console.log('Consulta SQL:', consulta_horario.toString());
-
                     conexion.query(consulta_horario.toString(), function(error, registros_horarios, campos){
                         if (error) {
                             throw error;
                         }
-
                         registros_horarios.forEach(function(registro_horario, indice, arreglo){
                             horas_ind.fecha = registro_horario.fecha;
                             horas_ind.hora1 = registro_horario.hora1;
@@ -224,36 +216,18 @@ const squel = require('squel');
                             horas_ind.detalle = registro_horario.detalle;
                             horarios.push(horas_ind);
                         });
-
-                        console.log("numero de horarios");
-                        console.log(horarios.length);
-
-                        console.log("Arreglo de folios");
-                        console.log(horarios);
-
-
                         var valor;
-                        for (let index = 0; index < horarios.length; index++) {
-                           
+                        for (let index = 0; index < horarios.length; index++) {                        
                                 valor = "Fecha: "+horarios[index].fecha+", Horario: "+horarios[index].hora1+" - "+horarios[index].hora2;
                                 horarios_a.push((index+1)+" - ");
                                 horarios_a.push(valor);
-                                horarios_a.push("\n\n");
-                                
+                                horarios_a.push("\n\n");                            
                         }
-
                         conexion.end();
-
-                        return flowDynamic(`*${horarios_a}*`)
-
-                        
-
+                        return flowDynamic('Fecha y hora de venta para *Kinder Citlaltzintli*\n\n'+`${horarios_a}`)
                     }) 
             }
         )
-        // .addAnswer('Fecha: '+fecha1)
-        // .addAnswer('Hora: '+horario1)
-        // .addAnswer(detalle1)
         const kinder1_1_3 = addKeyword(['3'])
         .addAnswer(['⌛⌛⌛ ...'])
         // .addAnswer(
