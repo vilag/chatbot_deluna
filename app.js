@@ -188,6 +188,7 @@ const squel = require('squel');
                 console.log("Valor capturado");
                 console.log(nombre);
                 let horarios = [];
+                let horarios_a = [];
                 let horas_ind = {};
 
                 let conexion = mysql.createConnection({
@@ -235,12 +236,12 @@ const squel = require('squel');
                         for (let index = 0; index < horarios.length; index++) {
                            
                                 valor = "Fecha: "+horarios[index].fecha+", Horario: "+horarios[index].hora1+" - "+horarios[index].hora2;
-                           
+                            horarios_a.push(valor);
                         }
 
                         conexion.end();
 
-                        return flowDynamic([`*${valor}*`,`*${valor}*`])
+                        return flowDynamic(`*${valor}*`)
 
                         
 
