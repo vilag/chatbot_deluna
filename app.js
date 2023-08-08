@@ -217,7 +217,9 @@ const squel = require('squel');
                             horarios.push(horas_ind);
                         });
                         var valor;
-                        for (let index = 0; index < horarios.length; index++) {                        
+                        for (let index = 0; index < horarios.length; index++) {  
+                            console.log("Array original"); 
+                            console.log(horarios);                     
                                 valor = "- Fecha: "+horarios[index].fecha+"\n- Horario: "+horarios[index].hora1+" - "+horarios[index].hora2+"\n- Nota: "+horarios[index].detalle;
                                 //horarios_a.push("*********\n");
                                 //horarios_a.push(("("+index+1)+")\n");
