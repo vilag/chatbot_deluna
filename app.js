@@ -218,9 +218,9 @@ const squel = require('squel');
                         });
                         var valor;
                         for (let index = 0; index < horarios.length; index++) {                        
-                                valor = "Fecha: "+horarios[index].fecha+", Horario: "+horarios[index].hora1+" - "+horarios[index].hora2;
+                                valor = "- Fecha: "+horarios[index].fecha+"\n- Horario: "+horarios[index].hora1+" - "+horarios[index].hora2+"\n- Nota: "+horarios[index].detalle;
                                 horarios_a.push("*********");
-                                horarios_a.push((index+1)+" - ");
+                                horarios_a.push(("("+index+1)+")\n");
                                 horarios_a.push(valor+"\n");
                                 horarios_a.push("*********");
                                 horarios_a.push("\n\n");                            
