@@ -234,13 +234,13 @@ const squel = require('squel');
                         var valor;
                         for (let index = 0; index < horarios.length; index++) {
                            
-                                valor = "Fecha: "+horarios[index].fecha+", Horario: "+horarios[index].fecha;
+                                valor = "Fecha: "+horarios[index].fecha+", Horario: "+horarios[index].hora1+" - "+horarios[index].hora2;
                            
                         }
 
                         conexion.end();
 
-                        return flowDynamic(`*${valor}*`)
+                        return flowDynamic([`*${valor}*`,`*${valor}*`])
 
                         
 
