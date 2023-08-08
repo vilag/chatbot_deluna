@@ -210,6 +210,8 @@ const squel = require('squel');
                             throw error;
                         }
                         registros_horarios.forEach(function(registro_horario, indice, arreglo){
+                            console.log("Registro horario");
+                            console.log(registro_horario);
                             horas_ind.fecha = registro_horario.fecha;
                             horas_ind.hora1 = registro_horario.hora1;
                             horas_ind.hora2 = registro_horario.hora2;
