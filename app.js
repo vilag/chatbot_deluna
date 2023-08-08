@@ -224,7 +224,7 @@ const squel = require('squel');
                                 horarios_a.push("\n\n");                            
                         }
                         conexion.end();
-                        return flowDynamic('Fecha y hora de venta para *Kinder Citlaltzintli*\n\n'+`${horarios_a}`)
+                        return flowDynamic('Fecha y hora de venta para *Kinder Citlaltzintli*\n\n'+`${horarios_a}\n\n\n ¿Puedo ayudarte con algo más? \n Escribe *Menu* para regresar al Menú principal`)
                     }) 
             }
         )
