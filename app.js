@@ -177,7 +177,6 @@ const squel = require('squel');
             media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690960848/De%20Luna/Citlaltzintli/Citlaltzintli_2_nvfeg8.jpg',
         })
         const kinder1_1_2 = addKeyword(['2'])
-        // .addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Citlaltzintli"*...'])
         .addAnswer(
             ['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Citlaltzintli_"*...'],
             { capture: true},
@@ -188,6 +187,7 @@ const squel = require('squel');
                 let horarios = [];
                 let horarios_a = [];
                 let horas_ind = {};
+                var idescuela = 1;
                 let conexion = mysql.createConnection({
                     host: 'srv366.hstgr.io',
                     user: 'u690371019_deluna',
@@ -203,7 +203,7 @@ const squel = require('squel');
                         .field('hora2')
                         .field('detalle')
                         .from('detalle_escuelas')
-                        .where('idescuela ='+nombre);
+                        .where('idescuela ='+idescuela);
                     console.log('Consulta SQL:', consulta_horario.toString());
                     conexion.query(consulta_horario.toString(), function(error, registros_horarios, campos){
                         if (error) {
