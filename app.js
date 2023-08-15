@@ -20,60 +20,6 @@ const MYSQL_DB_NAME = 'u690371019_deluna'
 const mysql = require('mysql');
 const squel = require('squel');
 
-                    // let horarios = [];
-                    // let horarios_a = [];
-                    // let horas_ind = {};
-                    // var idescuela = 1;
-                    // let conexion = mysql.createConnection({
-                    //     host: 'srv366.hstgr.io',
-                    //     user: 'u690371019_deluna',
-                    //     password: '4ZaZ>]qkFOn#',
-                    //     database: 'u690371019_deluna'
-                    // });
-                    // conexion.connect;
-                    // let consulta_horario = squel.select()
-                    //     .field('iddetalle')
-                    //     .field('idescuela')
-                    //     .field('fecha')
-                    //     .field('hora1')
-                    //     .field('hora2')
-                    //     .field('detalle')
-                    //     .from('detalle_escuelas')
-                    //     .where('idescuela ='+idescuela);
-                    // console.log('Consulta SQL:', consulta_horario.toString());
-                    // conexion.query(consulta_horario.toString(), function(error, registros_horarios, campos){
-                    //     if (error) {
-                    //         throw error;
-                    //     }
-                        
-                    //     registros_horarios.forEach(function(registro_horario, indice, arreglo){
-                    //         console.log("Registro horario");
-                    //         console.log(registro_horario);
-                    //         horas_ind.fecha = registro_horario.fecha;
-                    //         horas_ind.hora1 = registro_horario.hora1;
-                    //         horas_ind.hora2 = registro_horario.hora2;
-                    //         horas_ind.detalle = registro_horario.detalle;
-                    //         horarios.push(horas_ind);
-                    //     });
-                    //     var valor;
-                    //     for (let index = 0; index < horarios.length; index++) {                      
-                    //             valor = "- Fecha: "+horarios[index].fecha+"\n- Horario: "+horarios[index].hora1+" - "+horarios[index].hora2+"\n- Nota: "+horarios[index].detalle;
-                    //             //horarios_a.push("*********\n");
-                    //             //horarios_a.push(("("+index+1)+")\n");
-                    //             horarios_a.push(valor);
-                    //             //horarios_a.push("*********");
-                    //            // horarios_a.push("\n\n");                            
-                    //     }
-                    //     conexion.end();
-                    //     console.log("Array de horarios");
-                    //     console.log(horarios_a);
-                    //     return flowDynamic('Fecha y hora de venta para *Kinder Citlaltzintli*\n\n'+`${horarios_a}\n\n¿Puedo ayudarte con algo más?\n\nEscribe *Menu* para regresar al Menú principal`)
-                    // }) 
-
-
-
-
-
         const kinder1_1_1 = addKeyword(['1']).
         addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Kinder Citlaltzintli"*...'])
         .addAnswer('Lista de precios 1', {
@@ -115,8 +61,7 @@ const squel = require('squel');
                     conexion.query(consulta_horario.toString(), function(error, registros_horarios, campos){
                         if (error) {
                             throw error;
-                        }
-                        
+                        }  
                         registros_horarios.forEach(function(registro_horario, indice, arreglo){
                             console.log("Registro horario");
                             console.log(registro_horario);
@@ -128,95 +73,20 @@ const squel = require('squel');
                         });
                         var valor;
                         for (let index = 0; index < horarios.length; index++) {                      
-                                valor = "- Fecha: "+horarios[index].fecha+"\n- Horario: "+horarios[index].hora1+" - "+horarios[index].hora2+"\n- Nota: "+horarios[index].detalle;
-                                //horarios_a.push("*********\n");
-                                //horarios_a.push(("("+index+1)+")\n");
-                                horarios_a.push(valor);
-                                //horarios_a.push("*********");
-                               // horarios_a.push("\n\n");                            
+                                valor = "- Fecha: *"+horarios[index].fecha+"* \n- Horario: "+horarios[index].hora1+" - "+horarios[index].hora2+"\n- Nota: "+horarios[index].detalle;
+                                horarios_a.push(valor);                            
                         }
                         conexion.end();
                         console.log("Array de horarios");
                         console.log(horarios_a);
-                        return flowDynamic('Fecha y hora de venta para *Kinder Citlaltzintli*\n\n'+`${horarios_a}\n\n¿Puedo ayudarte con algo más?\n\nEscribe *Menu* para regresar al Menú principal`)
+                        return flowDynamic('Fecha y hora de venta para *Kinder Citlaltzintli*\n\n'+`${horarios_a}\n\n`)
                     }) 
             }
         )
-        .addAnswer(['Continuamos...'])
+        .addAnswer('¿Puedo ayudarte con algo más?\n\nEscribe *Menu* para regresar al Menú principal', {
+            delay: 500,
+        })
         const kinder1_1_3 = addKeyword(['3'])
-        .addAnswer(['⌛⌛⌛ ...'])
-        // .addAnswer(
-        //     ['Por favor ingrese el *folio* que se encuentra en su ticket'],
-        //     { capture: true},
-    
-        //     async (ctx, { flowDynamic, endFlow }) => {
-                
-        //         nombre = ctx.body
-        //         console.log("Valor capturado");
-        //         console.log(nombre);
-
-                
-
-        //         let conexion = mysql.createConnection({
-        //             host: 'srv366.hstgr.io',
-        //             user: 'u690371019_gp',
-        //             password: '@m?02Db3',
-        //             database: 'u690371019_gp'
-        //         });
-
-                
-
-        //         let folios = [];
-        //         let folio_ind = {};
-
-        //         conexion.connect;
-
-        //         let consulta_folio = squel.select()
-        //                 .field('idhorario')
-        //                 .field('idescuela')
-        //                 .field('nom_esc')
-        //                 .field('fecha')
-        //                 .field('horario')
-        //                 .field('detalle')
-        //                 .from('horarios_venta')
-        //                 .where('idhorario = '+nombre);
-
-        //             console.log('Consulta SQL:', consulta_folio.toString());
-
-        //             conexion.query(consulta_folio.toString(), function(error, registros_folio, campos){
-        //                 if (error) {
-        //                     throw error;
-        //                 }
-
-        //                 registros_folio.forEach(function(registro_folio, indice, arreglo){
-        //                     folio_ind.idhorario = registro_folio.idhorario;
-        //                     folio_ind.detalle = registro_folio.detalle;
-        //                     folios.push(folio_ind);
-        //                 });
-
-        //                 console.log("numero de folios");
-        //                 console.log(folios.length);
-
-        //                 console.log("Arreglo de folios");
-        //                 console.log(folios);
-
-
-        //                 var valor;
-        //                 for (let index = 0; index < folios.length; index++) {
-        //                     if (folios[index].idhorario==nombre) {
-        //                         valor = folios[index].detalle
-        //                     }
-        //                 }
-
-        //                 conexion.end();
-
-        //                 return flowDynamic(`Estatus: *${valor}*`)
-
-                        
-
-        //             }) 
-        //     }
-        // )
         .addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
         const kinder1_1_4 = addKeyword(['4']).
         addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
