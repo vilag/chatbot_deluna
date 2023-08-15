@@ -20,6 +20,18 @@ const MYSQL_DB_NAME = 'u690371019_deluna'
 const mysql = require('mysql');
 const squel = require('squel');
 
+
+
+
+
+
+
+
+
+
+
+
+
         const kinder1_1_1 = addKeyword(['1']).
         addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Kinder Citlaltzintli"*...'])
         .addAnswer('Lista de precios 1', {
@@ -30,7 +42,7 @@ const squel = require('squel');
         })
         const kinder1_1_2 = addKeyword(['2'])
         .addAnswer(
-            ['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Citlaltzintli"*...'],
+            ['--------------------'],
             { capture: false},
             async (ctx, { flowDynamic, endFlow }) => {               
                 nombre = ctx.body
@@ -73,7 +85,7 @@ const squel = require('squel');
                         });
                         var valor;
                         for (let index = 0; index < horarios.length; index++) {                      
-                                valor = "- Fecha: *"+horarios[index].fecha+"* \n- Horario: "+horarios[index].hora1+" - "+horarios[index].hora2+"\n- Nota: "+horarios[index].detalle;
+                                valor = "Fecha: *"+horarios[index].fecha+"*\n\nHorario: *"+horarios[index].hora1+" - "+horarios[index].hora2+"*\n\nNota: *"+horarios[index].detalle+"*";
                                 horarios_a.push(valor);                            
                         }
                         conexion.end();
@@ -83,15 +95,33 @@ const squel = require('squel');
                     }) 
             }
         )
-        .addAnswer('¿Puedo ayudarte con algo más?\n\nEscribe *Menu* para regresar al Menú principal', {
-            delay: 500,
-        })
+            .addAnswer('¿Puedo ayudarte con algo más?\n\nEscribe *Menu* para regresar al Menú principal', null, (ctx,{flowDynamic}) => {
+                setTimeout(() => {
+                    flowDynamic('Prueba')
+                }, 500)
+            })
+
+
+        // .addAnswer('¿Puedo ayudarte con algo más?\n\nEscribe *Menu* para regresar al Menú principal', {
+        //     delay: 500,
+        // })
         const kinder1_1_3 = addKeyword(['3'])
         .addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
         const kinder1_1_4 = addKeyword(['4']).
         addAnswer(['⌛⌛⌛ A la brevedad un asesor se comunicará con usted'])
         const kinder1_1_5 = addKeyword(['5']).
         addAnswer(['Gracias por comunicarte a *Uniformes De Luna*'])
+
+
+
+
+
+
+
+
+
+
+
 
 
 
