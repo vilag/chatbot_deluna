@@ -20,151 +20,57 @@ const MYSQL_DB_NAME = 'u690371019_deluna'
 const mysql = require('mysql');
 const squel = require('squel');
 
-// let conexion = mysql.createConnection({
-//     host: 'srv366.hstgr.io',
-//     user: 'u690371019_gp',
-//     password: '@m?02Db3',
-//     database: 'u690371019_gp'
-// });
-
-// let horarios = [];
-// let hora_ind = {};
-
-// var fecha1;
-// var horario1;
-// var detalle1;
-
-// var fecha2;
-// var horario2;
-// var detalle2;
-
-// var fecha3;
-// var horario3;
-// var detalle3;
-
-// var fecha4;
-// var horario4;
-// var detalle4;
-
-// var fecha5;
-// var horario5;
-// var detalle5;
-
-// var fecha6;
-// var horario6;
-// var detalle6;
-
-// var fecha7;
-// var horario7;
-// var detalle7;
-
-// var fecha8;
-// var horario8;
-// var detalle8;
-
-// var fecha9;
-// var horario9;
-// var detalle9;
-
-// var fecha10;
-// var horario10;
-// var detalle10;
-
-// var fecha11;
-// var horario11;
-// var detalle11;
+                    // let horarios = [];
+                    // let horarios_a = [];
+                    // let horas_ind = {};
+                    // var idescuela = 1;
+                    // let conexion = mysql.createConnection({
+                    //     host: 'srv366.hstgr.io',
+                    //     user: 'u690371019_deluna',
+                    //     password: '4ZaZ>]qkFOn#',
+                    //     database: 'u690371019_deluna'
+                    // });
+                    // conexion.connect;
+                    // let consulta_horario = squel.select()
+                    //     .field('iddetalle')
+                    //     .field('idescuela')
+                    //     .field('fecha')
+                    //     .field('hora1')
+                    //     .field('hora2')
+                    //     .field('detalle')
+                    //     .from('detalle_escuelas')
+                    //     .where('idescuela ='+idescuela);
+                    // console.log('Consulta SQL:', consulta_horario.toString());
+                    // conexion.query(consulta_horario.toString(), function(error, registros_horarios, campos){
+                    //     if (error) {
+                    //         throw error;
+                    //     }
+                        
+                    //     registros_horarios.forEach(function(registro_horario, indice, arreglo){
+                    //         console.log("Registro horario");
+                    //         console.log(registro_horario);
+                    //         horas_ind.fecha = registro_horario.fecha;
+                    //         horas_ind.hora1 = registro_horario.hora1;
+                    //         horas_ind.hora2 = registro_horario.hora2;
+                    //         horas_ind.detalle = registro_horario.detalle;
+                    //         horarios.push(horas_ind);
+                    //     });
+                    //     var valor;
+                    //     for (let index = 0; index < horarios.length; index++) {                      
+                    //             valor = "- Fecha: "+horarios[index].fecha+"\n- Horario: "+horarios[index].hora1+" - "+horarios[index].hora2+"\n- Nota: "+horarios[index].detalle;
+                    //             //horarios_a.push("*********\n");
+                    //             //horarios_a.push(("("+index+1)+")\n");
+                    //             horarios_a.push(valor);
+                    //             //horarios_a.push("*********");
+                    //            // horarios_a.push("\n\n");                            
+                    //     }
+                    //     conexion.end();
+                    //     console.log("Array de horarios");
+                    //     console.log(horarios_a);
+                    //     return flowDynamic('Fecha y hora de venta para *Kinder Citlaltzintli*\n\n'+`${horarios_a}\n\n¿Puedo ayudarte con algo más?\n\nEscribe *Menu* para regresar al Menú principal`)
+                    // }) 
 
 
-// conexion.connect;
-
-// let consulta = squel.select()
-//     .field('idhorario')
-//     .field('idescuela')
-//     .field('nom_esc')
-//     .field('fecha')
-//     .field('horario')
-//     .field('detalle')
-//     .from('horarios_venta');
-
-// console.log('Consulta SQL:', consulta.toString());
-
-// conexion.query(consulta.toString(), function(error, registros, campos){
-//     if (error) {
-//         throw error;
-//     }
-
-//     registros.forEach(function(registro, indice, arreglo){
-//         hora_ind.idhorario = registro.idhorario;
-//         hora_ind.idescuela = registro.idescuela;
-//         hora_ind.nom_esc = registro.nom_esc;
-//         hora_ind.fecha = registro.fecha;
-//         hora_ind.horario = registro.horario;
-//         hora_ind.detalle = registro.detalle;
-//         horarios.push(hora_ind);
-//     });
-
-//     console.log("Arreglo de horarios");
-//     console.log(horarios);
-
-//     for (let index = 0; index < horarios.length; index++) {
-//         if (index==0) {
-//             fecha1 = horarios[index].fecha;
-//             horario1 = horarios[index].horario;
-//             detalle1 = horarios[index].detalle;
-//         }
-//         if (index==1) {
-//             fecha2 = horarios[index].fecha;
-//             horario2 = horarios[index].horario;
-//             detalle2 = horarios[index].detalle;
-//         }
-//         if (index==2) {
-//             fecha3 = horarios[index].fecha;
-//             horario3 = horarios[index].horario;
-//             detalle3 = horarios[index].detalle;
-//         }
-//         if (index==3) {
-//             fecha4 = horarios[index].fecha;
-//             horario4 = horarios[index].horario;
-//             detalle4 = horarios[index].detalle;
-//         }
-//         if (index==4) {
-//             fecha5 = horarios[index].fecha;
-//             horario5 = horarios[index].horario;
-//             detalle5 = horarios[index].detalle;
-//         }
-//         if (index==5) {
-//             fecha6 = horarios[index].fecha;
-//             horario6 = horarios[index].horario;
-//             detalle6 = horarios[index].detalle;
-//         }
-//         if (index==6) {
-//             fecha7 = horarios[index].fecha;
-//             horario7 = horarios[index].horario;
-//             detalle7 = horarios[index].detalle;
-//         }
-//         if (index==7) {
-//             fecha8 = horarios[index].fecha;
-//             horario8 = horarios[index].horario;
-//             detalle8 = horarios[index].detalle;
-//         }
-//         if (index==8) {
-//             fecha9 = horarios[index].fecha;
-//             horario9 = horarios[index].horario;
-//             detalle9 = horarios[index].detalle;
-//         }
-//         if (index==9) {
-//             fecha10 = horarios[index].fecha;
-//             horario10 = horarios[index].horario;
-//             detalle10 = horarios[index].detalle;
-//         }
-//         if (index==10) {
-//             fecha11 = horarios[index].fecha;
-//             horario11 = horarios[index].horario;
-//             detalle11 = horarios[index].detalle;
-//         }
-
-        
-//     }
 
 
 
@@ -184,18 +90,19 @@ const squel = require('squel');
                 nombre = ctx.body
                 console.log("Valor capturado");
                 console.log(nombre);
-                let horarios = [];
-                let horarios_a = [];
-                let horas_ind = {};
-                var idescuela = 1;
-                let conexion = mysql.createConnection({
-                    host: 'srv366.hstgr.io',
-                    user: 'u690371019_deluna',
-                    password: '4ZaZ>]qkFOn#',
-                    database: 'u690371019_deluna'
-                });
-                conexion.connect;
-                let consulta_horario = squel.select()
+
+                    let horarios = [];
+                    let horarios_a = [];
+                    let horas_ind = {};
+                    var idescuela = 1;
+                    let conexion = mysql.createConnection({
+                        host: 'srv366.hstgr.io',
+                        user: 'u690371019_deluna',
+                        password: '4ZaZ>]qkFOn#',
+                        database: 'u690371019_deluna'
+                    });
+                    conexion.connect;
+                    let consulta_horario = squel.select()
                         .field('iddetalle')
                         .field('idescuela')
                         .field('fecha')
@@ -209,6 +116,7 @@ const squel = require('squel');
                         if (error) {
                             throw error;
                         }
+                        
                         registros_horarios.forEach(function(registro_horario, indice, arreglo){
                             console.log("Registro horario");
                             console.log(registro_horario);
@@ -219,9 +127,7 @@ const squel = require('squel');
                             horarios.push(horas_ind);
                         });
                         var valor;
-                        for (let index = 0; index < horarios.length; index++) {  
-                            console.log("Array original"); 
-                            console.log(horarios);                     
+                        for (let index = 0; index < horarios.length; index++) {                      
                                 valor = "- Fecha: "+horarios[index].fecha+"\n- Horario: "+horarios[index].hora1+" - "+horarios[index].hora2+"\n- Nota: "+horarios[index].detalle;
                                 //horarios_a.push("*********\n");
                                 //horarios_a.push(("("+index+1)+")\n");
