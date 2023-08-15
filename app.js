@@ -84,8 +84,8 @@ const squel = require('squel');
         })
         const kinder1_1_2 = addKeyword(['2'])
         .addAnswer(
-            ['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Citlaltzintli_"*...'],
-            { capture: true},
+            ['⌛⌛⌛ Consultando Fechas y horarios de venta para el *"Kinder Citlaltzintli"*...'],
+            { capture: false},
             async (ctx, { flowDynamic, endFlow }) => {               
                 nombre = ctx.body
                 console.log("Valor capturado");
