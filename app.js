@@ -42,7 +42,7 @@ const squel = require('squel');
         })
         const kinder1_1_2 = addKeyword(['2'])
         .addAnswer(
-            ['--------------------'],
+            ['Fecha y hora de venta para *Kinder Citlaltzintli*'],
             { capture: false},
             async (ctx, { flowDynamic, endFlow }) => {               
                 nombre = ctx.body
@@ -91,15 +91,15 @@ const squel = require('squel');
                         conexion.end();
                         console.log("Array de horarios");
                         console.log(horarios_a);
-                        return flowDynamic('Fecha y hora de venta para *Kinder Citlaltzintli*\n\n'+`${horarios_a}\n\n`)
+                        return flowDynamic('\n\n'+`${horarios_a}\n\n`)
                     }) 
             }
         )
-            .addAnswer('¿Puedo ayudarte con algo más?\n\nEscribe *Menu* para regresar al Menú principal', null, (ctx,{flowDynamic}) => {
-                setTimeout(() => {
-                    flowDynamic('Prueba')
-                }, 500)
-            })
+            // .addAnswer('¿Puedo ayudarte con algo más?\n\nEscribe *Menu* para regresar al Menú principal', null, (ctx,{flowDynamic}) => {
+            //     setTimeout(() => {
+            //         flowDynamic('Prueba')
+            //     }, 500)
+            // })
 
 
         // .addAnswer('¿Puedo ayudarte con algo más?\n\nEscribe *Menu* para regresar al Menú principal', {
