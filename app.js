@@ -91,20 +91,11 @@ const squel = require('squel');
                         conexion.end();
                         console.log("Array de horarios");
                         console.log(horarios_a);
-                        return flowDynamic('\n\n'+`${horarios_a}\n\n\n\n¿Puedo ayudarte con algo más?\n\nEscribe *Menu* para regresar al Menú principal`)
+                        return flowDynamic(`${horarios_a}\n\n\n¿Puedo ayudarte con algo más?\n\nEscribe *Menu* para regresar al Menú principal`)
                     }) 
             }
         )
-            // .addAnswer('¿Puedo ayudarte con algo más?\n\nEscribe *Menu* para regresar al Menú principal', null, (ctx,{flowDynamic}) => {
-            //     setTimeout(() => {
-            //         flowDynamic('Prueba')
-            //     }, 500)
-            // })
 
-
-        // .addAnswer('¿Puedo ayudarte con algo más?\n\nEscribe *Menu* para regresar al Menú principal', {
-        //     delay: 500,
-        // })
         const kinder1_1_3 = addKeyword(['3'])
         .addAnswer(['⌛⌛⌛ Por favor ingrese el *folio* que se encuentra en su ticket'])
         const kinder1_1_4 = addKeyword(['4']).
