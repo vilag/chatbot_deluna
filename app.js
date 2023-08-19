@@ -91,7 +91,7 @@ const squel = require('squel');
                         conexion.end();
                         console.log("Array de horarios");
                         console.log(horarios_a);
-                        return flowDynamic('\n\n'+`${horarios_a}\n\n`)
+                        return flowDynamic('\n\n'+`${horarios_a}\n\n\n\n¿Puedo ayudarte con algo más?\n\nEscribe *Menu* para regresar al Menú principal`)
                     }) 
             }
         )
