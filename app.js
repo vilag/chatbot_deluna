@@ -1180,7 +1180,7 @@ const squel = require('squel');
                 
                 //console.log('Mensaje entrante: ',ctx.body)
         })
-        addAnswer(['Kinder encontrado'])
+        .addAnswer(['Kinder encontrado'])
 
         const Primaria = addKeyword(['2'])
         .addAnswer(
