@@ -1189,16 +1189,16 @@ const squel = require('squel');
         
                   
             
-                // if (!ctx.body.includes('Citlaltzintli')) {
-                //     //if (!ctx.body.includes('2')) {
-                //         return fallBack()
-                //     //} 
-                // }
+                if (!valor) {
+                    //if (!ctx.body.includes('2')) {
+                        return fallBack()
+                    //} 
+                }
                 
                 
                 //console.log('Mensaje entrante: ',ctx.body)
         })
-        // .addAnswer(['Kinder encontrado'])
+        .addAnswer(['Kinder encontrado'])
         // .addAnswer(
         //     ['Has seleccionado *Kínder*, por favor ingresa el nombre de la escuela...'],
         //     null,
