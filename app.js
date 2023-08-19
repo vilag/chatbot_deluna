@@ -1140,7 +1140,8 @@ const squel = require('squel');
             'Secundaria Mixta Foránea 10',
             'Secundaria Mixta',
             'Foránea 10',
-            'Foranea 10'
+            'Foranea 10',
+            'Mixta 10'
             ])
         .addAnswer(
             ['¿Usted quiso decir *Escuela Secundaria Mixta “Foránea #10”*?','','*1.* Si','*2.* No'],
@@ -1162,12 +1163,24 @@ const squel = require('squel');
 
 
         const Kinder = addKeyword(['1'])
-        .addAnswer(
-            ['Has seleccionado *Kínder*, por favor ingresa el nombre de la escuela...'],
-            null,
-            null,
-            [kinder1,kinder2,kinder3,kinder4,kinder5]
-        )
+        // .addAnswer(
+        //     ['Has seleccionado *Kínder*, por favor ingresa el nombre de la escuela...'],
+        //     null,
+        //     null,
+        //     [kinder1,kinder2,kinder3,kinder4,kinder5]
+        // )
+
+        .addAnswer('Has seleccionado *Kínder*, por favor ingresa el nombre de la escuela...',{capture:true},(ctx, {fallBack}) => {
+                if (!ctx.body.includes('Citlaltzintli')) {
+                    //if (!ctx.body.includes('2')) {
+                        return fallBack()
+                    //} 
+                }
+                
+                
+                //console.log('Mensaje entrante: ',ctx.body)
+        })
+        addAnswer(['Kinder encontrado'])
 
         const Primaria = addKeyword(['2'])
         .addAnswer(
