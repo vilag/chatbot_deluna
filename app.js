@@ -1168,12 +1168,12 @@ const squel = require('squel');
             .field('opcion')
             .field('nom_esc')
             .from('detalle_escuelas_nom')
-            .where('opcion ='+"'Citla'");
+            .where('opcion ='+ctx.body);
         console.log('Consulta SQL:', consulta_nombre.toString());
         conexion.query(consulta_nombre.toString(), function(error, respuesta_nombre, campos){
             if (error) {
-                return fallBack()
-                //throw error;
+                
+                throw error;
             }  
             respuesta_nombre.forEach(function(respuesta, indice, arreglo){
                 nombre.nom_esc = respuesta.nom_esc;
