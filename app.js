@@ -1154,6 +1154,7 @@ const squel = require('squel');
 
         const Kinder = addKeyword(['1'])
         .addAnswer('Has seleccionado *Kínder*, por favor ingresa el nombre de la escuela...',{capture:true},(ctx, {fallBack}) => {
+        console.log(ctx.body);
         let arr_nombre = [];
         let nombre = {};
         let conexion = mysql.createConnection({
@@ -1168,7 +1169,7 @@ const squel = require('squel');
             .field('opcion')
             .field('nom_esc')
             .from('detalle_escuelas_nom')
-            .where('opcion ='+ctx.body);
+            .where('opcion ='+"'"+ctx.body+"'");
         console.log('Consulta SQL:', consulta_nombre.toString());
         conexion.query(consulta_nombre.toString(), function(error, respuesta_nombre, campos){
             if (error) {
