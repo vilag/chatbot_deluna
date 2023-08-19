@@ -22,16 +22,6 @@ const squel = require('squel');
 
 
 
-
-
-
-
-
-
-
-
-
-
         const kinder1_1_1 = addKeyword(['1']).
         addAnswer(['⌛⌛⌛ Consultando lista de precios para el *"Kinder Citlaltzintli"*...'])
         .addAnswer('Lista de precios 1', {
@@ -1163,24 +1153,62 @@ const squel = require('squel');
 
 
         const Kinder = addKeyword(['1'])
-        // .addAnswer(
-        //     ['Has seleccionado *Kínder*, por favor ingresa el nombre de la escuela...'],
-        //     null,
-        //     null,
-        //     [kinder1,kinder2,kinder3,kinder4,kinder5]
-        // )
-
         .addAnswer('Has seleccionado *Kínder*, por favor ingresa el nombre de la escuela...',{capture:true},(ctx, {fallBack}) => {
-                if (!ctx.body.includes('Citlaltzintli')) {
-                    //if (!ctx.body.includes('2')) {
-                        return fallBack()
-                    //} 
-                }
+        let arr_nombre = [];
+        let nombre = {};
+        let conexion = mysql.createConnection({
+            host: 'srv366.hstgr.io',
+            user: 'u690371019_deluna',
+            password: '4ZaZ>]qkFOn#',
+            database: 'u690371019_deluna'
+        });
+        conexion.connect;
+        let consulta_nombre = squel.select()
+            .field('idcapture')
+            .field('opcion')
+            .field('nom_esc')
+            .from('detalle_escuelas_nom')
+            .where('opcion ='+"'Citla'");
+        console.log('Consulta SQL:', consulta_nombre.toString());
+        conexion.query(consulta_nombre.toString(), function(error, respuesta_nombre, campos){
+            if (error) {
+                return fallBack()
+                //throw error;
+            }  
+            respuesta_nombre.forEach(function(respuesta, indice, arreglo){
+                nombre.nom_esc = respuesta.nom_esc;
+                arr_nombre.push(nombre);
+            });
+            var valor = arr_nombre[0];
+            
+            conexion.end();
+            console.log(valor);
+            
+        })  
+
+        
+                  
+            
+                // if (!ctx.body.includes('Citlaltzintli')) {
+                //     //if (!ctx.body.includes('2')) {
+                //         return fallBack()
+                //     //} 
+                // }
                 
                 
                 //console.log('Mensaje entrante: ',ctx.body)
         })
         .addAnswer(['Kinder encontrado'])
+        .addAnswer(
+            ['Has seleccionado *Kínder*, por favor ingresa el nombre de la escuela...'],
+            null,
+            null,
+            [kinder1,kinder2,kinder3,kinder4,kinder5]
+        )
+
+
+
+
 
         const Primaria = addKeyword(['2'])
         .addAnswer(
