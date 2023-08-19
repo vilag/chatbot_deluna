@@ -1184,17 +1184,19 @@ const squel = require('squel');
             
             conexion.end();
             console.log(valor);
+
+            if (!valor) {
+                //if (!ctx.body.includes('2')) {
+                    return fallBack()
+                //} 
+            }
             
         })  
 
         
                   
             
-                if (!valor) {
-                    //if (!ctx.body.includes('2')) {
-                        return fallBack()
-                    //} 
-                }
+                
                 
                 
                 //console.log('Mensaje entrante: ',ctx.body)
