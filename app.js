@@ -1198,13 +1198,13 @@ const squel = require('squel');
                 
                 //console.log('Mensaje entrante: ',ctx.body)
         })
-        .addAnswer(['Kinder encontrado'])
-        .addAnswer(
-            ['Has seleccionado *Kínder*, por favor ingresa el nombre de la escuela...'],
-            null,
-            null,
-            [kinder1,kinder2,kinder3,kinder4,kinder5]
-        )
+        // .addAnswer(['Kinder encontrado'])
+        // .addAnswer(
+        //     ['Has seleccionado *Kínder*, por favor ingresa el nombre de la escuela...'],
+        //     null,
+        //     null,
+        //     [kinder1,kinder2,kinder3,kinder4,kinder5]
+        // )
 
 
 
