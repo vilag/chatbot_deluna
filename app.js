@@ -1180,7 +1180,7 @@ const squel = require('squel');
                 nombre.nom_esc = respuesta.nom_esc;
                 arr_nombre.push(nombre);
             });
-            var valor = arr_nombre[0];
+            var valor = arr_nombre[0].nom_esc;
             
             conexion.end();
             console.log("Valor consultado");
