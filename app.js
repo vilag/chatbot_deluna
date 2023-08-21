@@ -1183,10 +1183,11 @@ const squel = require('squel');
             var valor = arr_nombre[0];
             
             conexion.end();
+            console.log("Valor consultado");
             console.log(valor);
 
             if (valor=='Kinder Citlaltzintli') {
- 
+                console.log("Entra positivo");
             }else{
                 return fallBack()
             }
