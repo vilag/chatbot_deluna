@@ -1180,18 +1180,20 @@ const squel = require('squel');
                 nombre.nom_esc = respuesta.nom_esc;
                 arr_nombre.push(nombre);
             });
-            var valor = arr_nombre[0];
+            //var valor = arr_nombre[0];
+            console.log("Valor encontrado");
+            console.log(nombre);
             
             conexion.end();
-            var data = JSON.parse(valor);
-            console.log("Valor consultado");
-            console.log(data.nom_esc);
+            // var data = JSON.parse(valor);
+            // console.log("Valor consultado");
+            // console.log(data.nom_esc);
 
-            if (data.nom_esc=='Kinder Citlaltzintli') {
-                console.log("Entra positivo");
-            }else{
-                return fallBack()
-            }
+            // if (data.nom_esc=='Kinder Citlaltzintli') {
+            //     console.log("Entra positivo");
+            // }else{
+            //     return fallBack()
+            // }
             
         })  
 
