@@ -1184,7 +1184,7 @@ const squel = require('squel');
             
             conexion.end();
             console.log("Valor consultado");
-            console.log(valor.nom_esc);
+            console.log(JSON.stringify(valor));
 
             if (valor=='Kinder Citlaltzintli') {
                 console.log("Entra positivo");
