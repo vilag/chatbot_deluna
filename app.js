@@ -1185,10 +1185,10 @@ const squel = require('squel');
             conexion.end();
             console.log(valor);
 
-            if (!valor) {
-                //if (!ctx.body.includes('2')) {
-                    return fallBack()
-                //} 
+            if (valor=='Kinder Citlaltzintli') {
+ 
+            }else{
+                return fallBack()
             }
             
         })  
@@ -1201,7 +1201,7 @@ const squel = require('squel');
                 
                 //console.log('Mensaje entrante: ',ctx.body)
         })
-        .addAnswer(['Kinder encontrado'])
+        //.addAnswer(['Kinder encontrado'])
         // .addAnswer(
         //     ['Has seleccionado *Kínder*, por favor ingresa el nombre de la escuela...'],
         //     null,
