@@ -1180,11 +1180,11 @@ const squel = require('squel');
                 nombre.nom_esc = respuesta.nom_esc;
                 arr_nombre.push(nombre);
             });
-            var valor = arr_nombre[0].nom_esc;
+            var valor = arr_nombre[0];
             
             conexion.end();
             console.log("Valor consultado");
-            console.log(valor);
+            console.log(valor.nom_esc);
 
             if (valor=='Kinder Citlaltzintli') {
                 console.log("Entra positivo");
