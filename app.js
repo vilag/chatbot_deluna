@@ -521,7 +521,7 @@ const squel = require('squel');
         const Secundaria1_1_1 = addKeyword(['1']).
         addAnswer(['⌛⌛⌛ Consultando lista de precios para  *Escuela Secundaria General #17 "Jose Antonio Torres"*...'])
         .addAnswer('Lista de precios 1', {
-            media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1690962232/De%20Luna/Sec%20General%2017/Sec._Gral._17f_xxutoa.jpg',
+            media: 'https://res.cloudinary.com/ddcszcshl/image/upload/v1692927374/WhatsApp_Image_2023-08-24_at_12.26.21_ydzrtn.jpg',
         })
         const Secundaria1_1_2 = addKeyword(['2'])
         // addAnswer(['⌛⌛⌛ Consultando Fechas y horarios de venta para *Escuela Secundaria General #17 "Jose Antonio Torres"*...'])
@@ -1182,7 +1182,7 @@ const squel = require('squel');
             });
             //var valor = arr_nombre[0];
             console.log("Valor encontrado");
-            console.log(nombre);
+            console.log(nombre.nom_esc);
             
             conexion.end();
             // var data = JSON.parse(valor);
