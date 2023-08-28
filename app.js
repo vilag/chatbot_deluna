@@ -1152,50 +1152,50 @@ const squel = require('squel');
 
 
 
-        const Kinder = addKeyword(['1'])
-        .addAnswer('Has seleccionado *Kínder*, por favor ingresa el nombre de la escuela...',{capture:true},(ctx, {fallBack}) => {
-        console.log(ctx.body);
-        let arr_nombre = [];
-        let nombre = {};
-        let conexion = mysql.createConnection({
-            host: 'srv366.hstgr.io',
-            user: 'u690371019_deluna',
-            password: '4ZaZ>]qkFOn#',
-            database: 'u690371019_deluna'
-        });
-        conexion.connect;
-        let consulta_nombre = squel.select()
-            .field('idcapture')
-            .field('opcion')
-            .field('nom_esc')
-            .from('detalle_escuelas_nom')
-            .where('opcion ='+"'"+ctx.body+"'");
-        console.log('Consulta SQL:', consulta_nombre.toString());
-        conexion.query(consulta_nombre.toString(), function(error, respuesta_nombre, campos){
-            if (error) {
+        // const Kinder = addKeyword(['1'])
+        // .addAnswer('Has seleccionado *Kínder*, por favor ingresa el nombre de la escuela...',{capture:true},(ctx, {fallBack}) => {
+        // console.log(ctx.body);
+        // let arr_nombre = [];
+        // let nombre = {};
+        // let conexion = mysql.createConnection({
+        //     host: 'srv366.hstgr.io',
+        //     user: 'u690371019_deluna',
+        //     password: '4ZaZ>]qkFOn#',
+        //     database: 'u690371019_deluna'
+        // });
+        // conexion.connect;
+        // let consulta_nombre = squel.select()
+        //     .field('idcapture')
+        //     .field('opcion')
+        //     .field('nom_esc')
+        //     .from('detalle_escuelas_nom')
+        //     .where('opcion ='+"'"+ctx.body+"'");
+        // console.log('Consulta SQL:', consulta_nombre.toString());
+        // conexion.query(consulta_nombre.toString(), function(error, respuesta_nombre, campos){
+        //     if (error) {
                 
-                throw error;
-            }  
-            respuesta_nombre.forEach(function(respuesta, indice, arreglo){
-                nombre.nom_esc = respuesta.nom_esc;
-                arr_nombre.push(nombre);
-            });
-            //var valor = arr_nombre[0];
-            console.log("Valor encontrado");
-            console.log(nombre.nom_esc);
+        //         throw error;
+        //     }  
+        //     respuesta_nombre.forEach(function(respuesta, indice, arreglo){
+        //         nombre.nom_esc = respuesta.nom_esc;
+        //         arr_nombre.push(nombre);
+        //     });
+        //     //var valor = arr_nombre[0];
+        //     console.log("Valor encontrado");
+        //     console.log(nombre.nom_esc);
             
-            conexion.end();
-            // var data = JSON.parse(valor);
-            // console.log("Valor consultado");
-            // console.log(data.nom_esc);
+        //     conexion.end();
+        //     // var data = JSON.parse(valor);
+        //     // console.log("Valor consultado");
+        //     // console.log(data.nom_esc);
 
-            // if (data.nom_esc=='Kinder Citlaltzintli') {
-            //     console.log("Entra positivo");
-            // }else{
-            //     return fallBack()
-            // }
+        //     // if (data.nom_esc=='Kinder Citlaltzintli') {
+        //     //     console.log("Entra positivo");
+        //     // }else{
+        //     //     return fallBack()
+        //     // }
             
-        })  
+        // })  
 
         
                   
@@ -1203,8 +1203,8 @@ const squel = require('squel');
                 
                 
                 
-                //console.log('Mensaje entrante: ',ctx.body)
-        })
+        //         //console.log('Mensaje entrante: ',ctx.body)
+        // })
         //.addAnswer(['Kinder encontrado'])
         // .addAnswer(
         //     ['Has seleccionado *Kínder*, por favor ingresa el nombre de la escuela...'],
@@ -1214,7 +1214,13 @@ const squel = require('squel');
         // )
 
 
-
+        const Kinder = addKeyword(['1'])
+        .addAnswer(
+            ['Has seleccionado *Kinder*, por favor ingresa el nombre de la escuela...'],
+            null,
+            null,
+            [kinder1,kinder2,kinder3,kinder4,kinder5]
+        )
 
 
         const Primaria = addKeyword(['2'])
